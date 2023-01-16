@@ -1,0 +1,1214 @@
+\hypertarget{_adv_world_8h_source}{}\doxysection{Adv\+World.\+h}
+\mbox{\hyperlink{_adv_world_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <conio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <ctype.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <process.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{finalround_8h}{finalround.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ UP\ 72}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ DOWN\ 80}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ LEFT\ 75}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ RIGHT\ 77}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}};}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_a63f972d7e05d93c97d5764c956b84e9d}{bend\_no}};}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}};}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}{key}};}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a901b282dd93ce60ecdaffa60344416b2}{wordgame}}();}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_ad2ae727c20e5f803e5f075b41aea2fb4}{record}}();}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a78f61ac2dd03bcba8e09ca20cd7d68e3}{load}}();}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_adf488ff0ce8098cd956c07890cbc5d50}{life}};}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_aad49cedd771da5ce9872fb364e8d6373}{Delay}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double});}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a678e66228c0453fbbe74a605bcc27c51}{Move}}();}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a1951985f3541f595fc7800fbd6dc5535}{Food}}();}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_afc01ad71e5a2a27ebbbe7b7983cbb02b}{Score}}();}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_ad3e8ad05a5a7e29f0d3959fed8699cd1}{r2title}}();}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_ae824443b3f661414ba1f2718e17fe97d}{gotoxy}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a7ea3861fdbe2c138a4768c1bc57edc06}{Bend}}();}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a1038bb98ca722fbe2f7a458d629f6a4d}{Boarder}}();}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a8ecb72ff0fd235afbf997e25815a13d5}{Down}}();}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_ac268cc4e608aa0068c30f2e4a652b084}{Left}}();}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a9226c9486c93021ea9290bdac5903ae4}{About}}();}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_aa1e4dcf406c3281b132a396a60965e0f}{Up}}();}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a1b0e394cd24dadbcff32387d3036da5f}{Right}}();}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a4ae4a6c601765f289ae97678bb8a4d6a}{ExitGame}}();}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_a40a74cbfd7d2271a5a5caeb629197dd1}{Scoreonly}}();}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a41320bcd176268538f9089d219cceb88}{awtitle}}();}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_aae3e2690cdff1de894c6a726f407b586}{r1}}();}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a07aaf1227e4d645f15e0a964f54ef291}{Start}}();}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a0aa4f19a1fed4396e1f1af1dfa74707e}{r1title}}();}
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a03aef505ffcb6ae91fd2a4b372dcf290}{r2abt}}();}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{_adv_world_8h_ac71a110c00e8fab4884bca7f193fc7b4}{p}}[20];}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{int}\ generaterandomnuber(\textcolor{keywordtype}{int}\ n)}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ srand(time(NULL));}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{return}\ rand()\ \%\ n;}
+\DoxyCodeLine{00061\ \}}
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_a44f6f9087a670d73941b5b79feb7f3ca}{win}}(\textcolor{keywordtype}{char}\ comp,\ \textcolor{keywordtype}{char}\ p1)}
+\DoxyCodeLine{00064\ \{}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{if}\ (comp\ ==\ p1)}
+\DoxyCodeLine{00067\ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ ((comp\ ==\ \textcolor{charliteral}{'r'})\ \&\&\ (p1\ ==\ \textcolor{charliteral}{'s'}))}
+\DoxyCodeLine{00071\ \ \ \ \ \{}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ ((p1\ ==\ \textcolor{charliteral}{'r'})\ \&\&\ (comp\ ==\ \textcolor{charliteral}{'s'}))}
+\DoxyCodeLine{00076\ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ ((comp\ ==\ \textcolor{charliteral}{'p'})\ \&\&\ (p1\ ==\ \textcolor{charliteral}{'r'}))}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ ((p1\ ==\ \textcolor{charliteral}{'p'})\ \&\&\ (comp\ ==\ \textcolor{charliteral}{'r'}))}
+\DoxyCodeLine{00085\ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ ((comp\ ==\ \textcolor{charliteral}{'s'})\ \&\&\ (p1\ ==\ \textcolor{charliteral}{'p'}))}
+\DoxyCodeLine{00089\ \ \ \ \ \{}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00092\ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ ((p1\ ==\ \textcolor{charliteral}{'s'})\ \&\&\ (comp\ ==\ \textcolor{charliteral}{'p'}))}
+\DoxyCodeLine{00094\ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \}}
+\DoxyCodeLine{00098\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcoordinate}{coordinate}}}
+\DoxyCodeLine{00099\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}};}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}};}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}};}
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcoordinate}{coordinate}}\ \mbox{\hyperlink{structcoordinate}{coordinate}};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \mbox{\hyperlink{structcoordinate}{coordinate}}\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}},\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[500],\ \mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}},\ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[30];}
+\DoxyCodeLine{00108\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}},\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}};}
+\DoxyCodeLine{00109\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_a8115ddeff807f03a1350a667d1ffd962}{aworld}}()}
+\DoxyCodeLine{00110\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{int}\ choice;}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{char}\ ch;}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{char}\ playerchar,\ compchar;}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{int}\ p1score\ =\ 0,\ compscore\ =\ 0;}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{int}\ temp;}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{char}\ dict[]\ =\ \{\textcolor{charliteral}{'r'},\ \textcolor{charliteral}{'p'},\ \textcolor{charliteral}{'s'}\};}
+\DoxyCodeLine{00120\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00121\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00122\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ Sleep(400);}
+\DoxyCodeLine{00125\ \ \ \ \ system(\textcolor{stringliteral}{"{}color\ A"{}});}
+\DoxyCodeLine{00126\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{00127\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{00128\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \ \ \ !!!!!!!!!!\ !!!!!!!!\ \ \ !!!\ \ \ \ \ \ \ \ \ \ \ !!!\ !!!!!!!!!\ \ !!!!\ \ \ \ \ !!!\ !!!!!!!!\ \ !!!!\ \ \ \ \ \ !!!\ !!!!!!!!!!!\ !!!\ \ \ !!!\ \ !!!!!!!!!!\ \ \ \ !!!!!!!!!!!\ \ !!!\ \ \ \ !!!\ \ !!!!!!!!!\ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00129\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \ \ \ !!!\ \ \ \ !!!\ !!!\ \ \ \ \ !!!\ !!!\ \ \ \ \ \ \ \ \ !!!\ \ !!!\ \ \ \ \ \ \ \ !!!!\ \ \ \ \ !!!\ !!!\ \ \ \ \ \ \ !!!!!!\ \ \ \ !!!\ \ \ \ \ !!!\ \ \ \ \ !!!\ \ \ !!!\ \ !!!\ \ \ \ \ !!!\ \ \ !!!\ \ \ \ \ !!!\ \ !!!\ \ \ \ !!!\ \ !!!\ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00130\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \ \ \ !!!\ \ \ \ !!!\ !!!\ \ \ \ \ !!!\ \ !!!\ 0\ \ \ 0\ !!!\ \ \ !!!\ \ \ \ \ \ \ \ !!\ !!!\ \ \ !!!\ !!!\ \ \ \ \ \ \ !!!\ !!!\ \ \ !!!\ \ \ \ \ !!!\ \ \ \ \ !!!\ \ \ !!!\ \ !!!\ \ \ \ \ !!!\ \ \ !!!\ \ \ \ \ !!!\ \ !!!\ \ \ \ !!!\ \ !!!\ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00131\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \ \ \ !!!!!!!!!!\ !!!\ \ \ \ \ !!!\ \ \ !!!\ \ \ \ \ !!!\ \ \ \ !!!!!!!!\ \ \ !!!\ !!!\ \ !!!\ !!!!!!!\ \ \ !!!\ \ !!!\ \ !!!\ \ \ \ \ !!!\ \ \ \ \ !!!\ \ \ !!!\ \ !!!!!!!!!\ \ \ \ \ !!!\ \ \ \ \ !!!\ \ !!!\ \ \ \ !!!\ \ !!!!!!!!!\ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00132\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \ \ \ !!!\ \ \ \ !!!\ !!!\ \ \ \ \ !!!\ \ \ \ !!!\ \ \ !!!\ \ \ \ \ !!!\ \ \ \ \ \ \ \ !!!\ \ !!!\ !!!\ !!!\ \ \ \ \ \ \ !!!\ \ \ !!!\ !!!\ \ \ \ \ !!!\ \ \ \ \ !!!\ \ \ !!!\ \ !!!\ \ \ \ !!!\ \ \ \ !!!\ \ \ \ \ !!!\ \ !!!\ \ \ \ !!!\ \ \ \ \ \ \ \ !!!\ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00133\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \ \ \ !!!\ \ \ \ !!!\ !!!\ \ \ \ \ !!!\ \ \ \ \ !!!\ !!!\ \ \ \ \ \ !!!\ \ \ \ \ \ \ \ !!!\ \ \ !!!!!!\ !!!\ \ \ \ \ \ \ !!!\ \ \ \ !!!!!!\ \ \ \ \ !!!\ \ \ \ \ !!!\ \ \ !!!\ \ !!!\ \ \ \ \ !!!\ \ \ !!!\ \ \ \ \ !!!\ \ !!!\ \ \ \ !!!\ \ \ \ \ \ \ \ !!!\ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00134\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \ \ \ !!!\ \ \ \ !!!\ !!!!!!!!!\ \ \ \ \ \ \ \ !!!!!\ \ \ \ \ \ \ !!!!!!!!!\ \ !!!\ \ \ \ \ !!!!\ !!!!!!!!\ \ !!!\ \ \ \ \ !!!!!\ \ \ \ \ !!!\ \ \ \ \ !!!!!!!!!\ \ !!!\ \ \ \ \ \ !!!\ \ !!!!!!!!!!!\ \ !!!!!!!!!!\ \ !!!!!!!!!\ \ \ \(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{00135\ \ \ \ \ Sleep(800);}
+\DoxyCodeLine{00136\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ !!!\ \ \ !!!\ \ \ !!!\ \ !!!!!!!!!!!!\ \ !!!!!!!!!!!\ \ \ \ !!!\ \ \ \ \ \ \ \ \ !!!!!!!!!!!\ \ \ !\ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00137\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ !!!\ \ \ !!!\ \ \ !!!\ \ !!!\ \ \ \ \ \ !!!\ \ !!!\ \ \ \ \ !!!\ \ \ \ !!!\ \ \ \ \ \ \ \ \ !!!\ \ \ \ \ \ !!!\ \ !\ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00138\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ !!!\ \ \ !!!\ \ \ !!!\ \ !!!\ \ \ \ \ \ !!!\ \ !!!\ \ \ \ \ !!!\ \ \ \ !!!\ \ \ \ \ \ \ \ \ !!!\ \ \ \ \ \ !!!\ \ !\ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00139\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ !!!\ \ \ !!!\ \ \ !!!\ \ !!!\ \ \ \ \ \ !!!\ \ !!!!!!!!!!!\ \ \ \ !!!\ \ \ \ \ \ \ \ \ !!!\ \ \ \ \ \ !!!\ \ !\ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00140\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ !!!\ \ \ !!!\ \ \ !!!\ \ !!!\ \ \ \ \ \ !!!\ \ !!!\ \ \ \ \ \ !!!\ \ \ !!!\ \ \ \ \ \ \ \ \ !!!\ \ \ \ \ \ !!!\ \ !\ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00141\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ !!!\ \ \ !!!\ \ \ !!!\ \ !!!\ \ \ \ \ \ !!!\ \ !!!\ \ \ \ \ \ \ !!!\ \ !!!\ \ \ \ \ \ \ \ \ !!!\ \ \ \ \ \ !!!\ \ !\ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00142\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ !!!!!!!!!!!!!!!\ \ !!!!!!!!!!!!\ \ !!!\ \ \ \ \ \ \ \ !!!\ !!!!!!!!!!\ \ !!!!!!!!!!!\ \ \ O\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00143\ \ \ \ \ Sleep(2000);}
+\DoxyCodeLine{00144\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00145\ \ \ \ \ system(\textcolor{stringliteral}{"{}color\ 4"{}});}
+\DoxyCodeLine{00146\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00147\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00148\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00149\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00150\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00151\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00152\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00153\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00154\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00155\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a9226c9486c93021ea9290bdac5903ae4}{About}}();}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t-\/Enter\ 1\ to\ join\ the\ journey\ of\ \ the\ Adventerous\ world\(\backslash\)n\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t-\/Enter\ 2\ to\ quit\ the\ game\(\backslash\)n"{}});}
+\DoxyCodeLine{00160\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tEnter\ \ :\ "{}});}
+\DoxyCodeLine{00161\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&choice);}
+\DoxyCodeLine{00162\ \ \ \ \ fgetc(stdin);}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordflow}{switch}\ (choice)}
+\DoxyCodeLine{00164\ \ \ \ \ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a07aaf1227e4d645f15e0a964f54ef291}{Start}}();}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Add\ function\ to\ return\ the\ Selecting"{}});}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Invalid\ comand!"{}});}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}color\ 1"{}});}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ Sleep(1000);}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ main();}
+\DoxyCodeLine{00180\ \ \ \ \ \}}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \(\backslash\)tPress\ any\ key\ to\ start!\ "{}});}
+\DoxyCodeLine{00183\ \ \ \ \ getch();}
+\DoxyCodeLine{00184\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00185\ \ \ \ \ system(\textcolor{stringliteral}{"{}color\ 1"{}});}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a0aa4f19a1fed4396e1f1af1dfa74707e}{r1title}}();}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00190\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00191\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|.\ \ \ \ *CHHOOSE\ 1\ FOR\ ROCK\ \ \ |\ 0\ |\ \ \ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00192\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00193\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|.\ \ \ \ *CHOOSE\ \ 2\ FOR\ PAPER\ \ |/\ /|\ \ \ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00194\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00195\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|.\ \ \ *CHOOSE\ \ 3\ FOR\ SCISSOR\ |>o\ |\ \ \ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00196\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00197\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|.\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00198\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}};}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ =\ 0;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ <\ 3;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{00201\ \ \ \ \ \{}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\%s\ 's\ turn:\ \ "{}},\ \mbox{\hyperlink{_adv_world_8h_ac71a110c00e8fab4884bca7f193fc7b4}{p}});}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\%d"{}},\ \&temp);}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ getchar();}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ playerchar\ =\ dict[temp\ -\/\ 1];}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tYou\ \ choose\ \%c\ \(\backslash\)n\ \ \ "{}},\ playerchar);}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tcomputer's\ turn\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ temp\ =\ generaterandomnuber(3)\ +\ 1;}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ compchar\ =\ dict[temp\ -\/\ 1];}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ Computer\ choose\ \ \%c\ \ \(\backslash\)n\ \ "{}},\ compchar);}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_a44f6f9087a670d73941b5b79feb7f3ca}{win}}(compchar,\ playerchar)\ ==\ 1)}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ compscore\ +=\ 1;}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|computer\ is\ taking\ lead\ |\(\backslash\)n\ "{}});}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|\%s=\ \%d\ \(\backslash\)n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n"{}},\ \mbox{\hyperlink{_adv_world_8h_ac71a110c00e8fab4884bca7f193fc7b4}{p}},\ p1score);}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|computer\ =\%d\ \ \(\backslash\)n\ \ \ \ \ \ \ \ |\(\backslash\)n"{}},\ compscore);}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_a44f6f9087a670d73941b5b79feb7f3ca}{win}}(compchar,\ playerchar)\ ==\ -\/1)}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ compscore\ +=\ 1;}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ p1score\ +=\ 1;}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (p1score\ ==\ compscore)}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|Its\ a\ draw\ \ \ \ \ \ \ \ \ \ |\(\backslash\)n\ "{}});}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|\%s=\ \%d\ \(\backslash\)n\ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n"{}},\ \mbox{\hyperlink{_adv_world_8h_ac71a110c00e8fab4884bca7f193fc7b4}{p}},\ p1score);}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|computer\ =\%d\ \ \(\backslash\)n\ \ \ \ |\(\backslash\)n"{}},\ compscore);}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (p1score\ >\ compscore)}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|you\ ARE\ TAKING\ THE\ LEAD\ \ |\(\backslash\)n\ "{}});}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|\%s=\ \%d\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n"{}},\ \mbox{\hyperlink{_adv_world_8h_ac71a110c00e8fab4884bca7f193fc7b4}{p}},\ p1score);}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|computer\ =\%d\ \ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n\ "{}},\ compscore);}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|COMPUTER\ IS\ TAKING\ THE\ LEAD\ \ |\(\backslash\)n\ "{}});}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|\%s=\ \%d\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n\ "{}},\ \mbox{\hyperlink{_adv_world_8h_ac71a110c00e8fab4884bca7f193fc7b4}{p}},\ p1score);}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|computer\ =\%d\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n\ "{}},\ compscore);}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ p1score\ +=\ 1;}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|You\ are\ taking\ lead\ \ \ \ \ \ |\(\backslash\)n\ "{}});}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|\%s=\ \%d\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n\ "{}},\ \mbox{\hyperlink{_adv_world_8h_ac71a110c00e8fab4884bca7f193fc7b4}{p}},\ p1score);}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|computer\ =\%d\ \ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n\ "{}},\ compscore);}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00272\ \ \ \ \ \}}
+\DoxyCodeLine{00273\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00274\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00275\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00276\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00277\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00278\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00279\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00280\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\_\_\_\_\_\_\_\_\_Total\ Score\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00281\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t|\%s's\ score=\%d\ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n"{}},\ \mbox{\hyperlink{_adv_world_8h_ac71a110c00e8fab4884bca7f193fc7b4}{p}},\ p1score);}
+\DoxyCodeLine{00282\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t|comp\ score=\%d\ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n"{}},\ compscore);}
+\DoxyCodeLine{00283\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordflow}{if}\ (p1score\ >\ compscore\ ||\ p1score\ ==\ compscore)}
+\DoxyCodeLine{00285\ \ \ \ \ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}color\ 2"{}});}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_(:\ *|C\ |\ O\ |\ N\ |\ G\ |\ R\ |\ A\ |\ T\ |\ U\ |\ L\ |\ A|\ T\ |\ I\ |\ O\ |\ N\ |\ S|*\ :)\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tCongratulations,\ you\ have\ won\ the\ first\ round\ of\ the\ Round\ of\ Luck!\(\backslash\)n"{}});}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tIt\ looks\ like\ luck\ was\ on\ your\ side\ this\ time.\ You\ \ have\ earned\ the\ right\ to\ continue\ on\ to\ the\ next\ round.\(\backslash\)n"{}});}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tGood\ luck\ as\ you\ progress\ through\ the\ rest\ of\ the\ game!\(\backslash\)n"{}});}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tThank\ you\ for\ playing\ and\ we\ hope\ you\ have\ a\ great\ time\ in\ Adventurous\ World.\(\backslash\)n"{}});}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tTo\ continue\ to\ the\ next\ round,\ simply\ press\ any\ key\ on\ your\ keyboard......\(\backslash\)n"{}});}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (getch()\ ==\ 27)}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ exit(0);}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}{key}};}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a03aef505ffcb6ae91fd2a4b372dcf290}{r2abt}}();}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}}\ =\ 5;}
+\DoxyCodeLine{00317\ }
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ =\ 25;}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ =\ 20;}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}}\ =\ \mbox{\hyperlink{_adv_world_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT}};}
+\DoxyCodeLine{00323\ }
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a1038bb98ca722fbe2f7a458d629f6a4d}{Boarder}}();}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a1951985f3541f595fc7800fbd6dc5535}{Food}}();}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_adf488ff0ce8098cd956c07890cbc5d50}{life}}\ =\ 3;}
+\DoxyCodeLine{00331\ }
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[0]\ =\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}};}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a678e66228c0453fbbe74a605bcc27c51}{Move}}();}
+\DoxyCodeLine{00336\ \ \ \ \ \}}
+\DoxyCodeLine{00337\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00338\ \ \ \ \ \{}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_(::::*SAD!!:::::)\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tUnfortunately,\ you\ have\ been\ eliminated\ from\ the\ Round\ of\ Luck\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tand\ will\ not\ be\ able\ to\ progress\ to\ any\ further\ levels\ in\ Adventurous\ World.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ Better\ luck\ next\ time!\ Thank\ you\ for\ playing,\ and\ we\ hope\ you\ had\ fun.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \ We\ hope\ to\ see\ you\ again\ soon\ for\ another\ exciting\ adventure!\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ Sleep(5000);}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ main();}
+\DoxyCodeLine{00354\ \ \ \ \ \}}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00356\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00357\ \}}
+\DoxyCodeLine{00358\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a0aa4f19a1fed4396e1f1af1dfa74707e}{r1title}}()}
+\DoxyCodeLine{00359\ \{}
+\DoxyCodeLine{00360\ \ \ \ \ system(\textcolor{stringliteral}{"{}color\ 0b"{}});}
+\DoxyCodeLine{00361\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00362\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00363\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00364\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00365\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00367\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \ ::::::\ \ \ ::::::\ ::\ \ ::\ ::\ \ \ \ \ ::\ ::::::\ \ \ \ \ ::::::\ ::::::\ \ \ \ ::\ \ \ \ \ ::\ \ ::\ :::::::\ ::\ \ ::\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00368\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \ ::\ \ ::\ \ \ ::\ \ ::\ ::\ \ ::\ ::\ ::\ \ ::\ ::\ \ \ ::\ \ \ \ ::\ \ ::\ ::\ \ \ \ \ \ \ \ ::\ \ \ \ \ ::\ \ ::\ ::\ \ \ \ \ \ ::\ \ ::\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00369\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \ ::::::\ \ \ ::\ \ ::\ ::\ \ ::\ ::\ \ ::\ ::\ ::\ \ \ ::\ \_\_\ ::\ \ ::\ ::::::\ \_\_\ ::\ \ \ \ \ ::\ \ ::\ ::\ \ \ \ \ \ ::::\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00370\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \ ::\ \ \ ::\ \ ::\ \ ::\ ::\ \ ::\ ::\ \ \ ::::\ ::\ \ \ ::\ \ \ \ ::\ \ ::\ ::\ \ \ \ \ \ \ \ ::\ \ \ \ \ ::\ \ ::\ ::\ \ \ \ \ \ ::\ \ ::\ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00371\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \ ::\ \ \ \ ::\ ::::::\ ::::::\ ::\ \ \ \ \ ::\ ::::::\ \ \ \ \ ::::::\ ::\ \ \ \ \ \ \ \ ::::::\ ::::::\ ::\ ::::\ ::\ \ \ ::\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00372\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00373\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00374\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00375\ \}}
+\DoxyCodeLine{00376\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_aae3e2690cdff1de894c6a726f407b586}{r1}}()}
+\DoxyCodeLine{00377\ \{}
+\DoxyCodeLine{00378\ \ \ \ \ Sleep(800);}
+\DoxyCodeLine{00379\ \ \ \ \ system(\textcolor{stringliteral}{"{}color\ 9"{}});}
+\DoxyCodeLine{00380\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ Welcome\ \%s\ to\ the\ \ First\ Round\ of\ Luck\ level\ of\ Adventurous\ World!\ \(\backslash\)n\ \ "{}},\ \mbox{\hyperlink{_adv_world_8h_ac71a110c00e8fab4884bca7f193fc7b4}{p}});}
+\DoxyCodeLine{00381\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00382\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ In\ this\ classic\ game\ of\ scissor,\ paper,\ rock,\ you'll\ face\ off\ against\ the\ computer\ in\ a\ series\ of\ rounds\(\backslash\)n\ ."{}});}
+\DoxyCodeLine{00383\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00384\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ The\ rules\ are\ simple:\ scissor\ beats\ paper,\ paper\ beats\ rock,\ and\ rock\ beats\ scissor.\ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00385\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00386\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ If\ you\ win\ or\ draw\ against\ the\ computer,\ you'll\ move\ on\ to\ the\ next\ round.\(\backslash\)n\ "{}});}
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00388\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00389\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00390\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ Can\ you\ outsmart\ the\ computer\ and\ emerge\ victorious\ in\ the\ Round\ of\ Luck?\ Let's\ find\ out!\ Good\ luck\ and\ have\ fun!\ \(\backslash\)n\ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00391\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00392\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00393\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00394\ \}}
+\DoxyCodeLine{00395\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a07aaf1227e4d645f15e0a964f54ef291}{Start}}()}
+\DoxyCodeLine{00396\ \{}
+\DoxyCodeLine{00397\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00398\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00399\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00400\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00401\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00402\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00403\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00404\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00405\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00406\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00407\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00408\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00409\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00410\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00411\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00412\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tGreetings\ adventurer!!\ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00413\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{00414\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{00415\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00416\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tBefore\ we\ begin\ our\ journey\ through\ the\ Adventurous\ World,\(\backslash\)n\ "{}});}
+\DoxyCodeLine{00417\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00418\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tplease\ tell\ us\ your\ name\ so\ we\ may\ properly\ address\ you\ on\ your\ journey:\ \ \ "{}});}
+\DoxyCodeLine{00419\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\ \(\backslash\)t\ \%s"{}},\ \mbox{\hyperlink{_adv_world_8h_ac71a110c00e8fab4884bca7f193fc7b4}{p}});}
+\DoxyCodeLine{00420\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00421\ }
+\DoxyCodeLine{00422\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a0aa4f19a1fed4396e1f1af1dfa74707e}{r1title}}();}
+\DoxyCodeLine{00423\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aae3e2690cdff1de894c6a726f407b586}{r1}}();}
+\DoxyCodeLine{00424\ \}}
+\DoxyCodeLine{00425\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a9226c9486c93021ea9290bdac5903ae4}{About}}()}
+\DoxyCodeLine{00426\ \{}
+\DoxyCodeLine{00427\ }
+\DoxyCodeLine{00428\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ABOUT\ THE\ GAME\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00429\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00430\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00431\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00432\ \ \ \ \ fflush(stdout);}
+\DoxyCodeLine{00433\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ Welcome\ to\ the\ Adventurous\ World,A\ place\ where\ you\ will\ embark\ on\ a\ journey\ of\ challenges\ and\ penalties,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00434\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00435\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ where\ you\ will\ struggle\ and\ overcome\ to\ come\ out\ victorious.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00436\ \ \ \ \ Sleep(1000);}
+\DoxyCodeLine{00437\ \ \ \ \ fflush(stdout);}
+\DoxyCodeLine{00438\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ As\ you\ enter\ this\ world,\ you\ will\ be\ facing\ rounds\ of\ diverse\ games,\ each\ one\ designed\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00439\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00440\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ to\ test\ different\ skills\ and\ abilities\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00441\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00442\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ Each\ round\ you\ pass\ will\ bring\ you\ closer\ to\ the\ ultimate\ goal\ of\ completing\ the\ adventure.\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00443\ \ \ \ \ fflush(stdout);}
+\DoxyCodeLine{00444\ \ \ \ \ Sleep(1000);}
+\DoxyCodeLine{00445\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ As\ you\ proceed\ through\ the\ rounds,\ you\ will\ encounter\ unknown\ territories\ and\ unexpected\ obstacles.\ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00446\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00447\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ So\ Be\ ready\ to\ face\ new\ challenges,\ and\ adapt\ to\ changing\ situations\ as\ you\ navigate\ your\ way\ through\ this\ exciting\ game\ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00448\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00449\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ be\ ware,\ one\ wrong\ move\ could\ lead\ to\ elimination,\ \ So\ stay\ sharp\ \ !\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00450\ \ \ \ \ Sleep(1000);}
+\DoxyCodeLine{00451\ \ \ \ \ fflush(stdout);}
+\DoxyCodeLine{00452\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\ \ "{}});}
+\DoxyCodeLine{00453\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00455\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ Are\ you\ ready\ to\ test\ your\ skills\ and\ luck\ in\ a\ series\ of\ challenging\ and\ exciting\ rounds?\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00456\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00457\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ Play\ now\ and\ see\ just\ how\ far\ you\ can\ go!\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00458\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00459\ }
+\DoxyCodeLine{00460\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00461\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00462\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00463\ \}}
+\DoxyCodeLine{00464\ }
+\DoxyCodeLine{00465\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a678e66228c0453fbbe74a605bcc27c51}{Move}}()}
+\DoxyCodeLine{00466\ \{}
+\DoxyCodeLine{00467\ \ \ \ \ \textcolor{keywordtype}{int}\ a,\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}};}
+\DoxyCodeLine{00468\ }
+\DoxyCodeLine{00469\ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00470\ \ \ \ \ \{}
+\DoxyCodeLine{00471\ }
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a1951985f3541f595fc7800fbd6dc5535}{Food}}();}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ fflush(stdin);}
+\DoxyCodeLine{00474\ }
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ =\ 0;}
+\DoxyCodeLine{00476\ }
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ =\ 0;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ <\ 30;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{00478\ }
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00480\ }
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ =\ 0;}
+\DoxyCodeLine{00482\ }
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ =\ 0;}
+\DoxyCodeLine{00484\ }
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}})}
+\DoxyCodeLine{00486\ }
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00489\ }
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aad49cedd771da5ce9872fb364e8d6373}{Delay}}(\mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}});}
+\DoxyCodeLine{00491\ }
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a1038bb98ca722fbe2f7a458d629f6a4d}{Boarder}}();}
+\DoxyCodeLine{00493\ }
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT}})}
+\DoxyCodeLine{00495\ }
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a1b0e394cd24dadbcff32387d3036da5f}{Right}}();}
+\DoxyCodeLine{00497\ }
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a437ef08681e7210d6678427030446a54}{LEFT}})}
+\DoxyCodeLine{00499\ }
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_ac268cc4e608aa0068c30f2e4a652b084}{Left}}();}
+\DoxyCodeLine{00501\ }
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a4193cd1c8c2e6ebd0e056fa2364a663f}{DOWN}})}
+\DoxyCodeLine{00503\ }
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a8ecb72ff0fd235afbf997e25815a13d5}{Down}}();}
+\DoxyCodeLine{00505\ }
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a1965eaca47dbf3f87acdafc2208f04eb}{UP}})}
+\DoxyCodeLine{00507\ }
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aa1e4dcf406c3281b132a396a60965e0f}{Up}}();}
+\DoxyCodeLine{00509\ }
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a4ae4a6c601765f289ae97678bb8a4d6a}{ExitGame}}();}
+\DoxyCodeLine{00511\ }
+\DoxyCodeLine{00512\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (!kbhit());}
+\DoxyCodeLine{00513\ }
+\DoxyCodeLine{00514\ \ \ \ \ a\ =\ getch();}
+\DoxyCodeLine{00515\ }
+\DoxyCodeLine{00516\ \ \ \ \ \textcolor{keywordflow}{if}\ (a\ ==\ 27)}
+\DoxyCodeLine{00517\ }
+\DoxyCodeLine{00518\ \ \ \ \ \{}
+\DoxyCodeLine{00519\ }
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00521\ }
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ exit(0);}
+\DoxyCodeLine{00523\ \ \ \ \ \}}
+\DoxyCodeLine{00524\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}{key}}\ =\ getch();}
+\DoxyCodeLine{00525\ }
+\DoxyCodeLine{00526\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}{key}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT}}\ \&\&\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}}\ !=\ \mbox{\hyperlink{_adv_world_8h_a437ef08681e7210d6678427030446a54}{LEFT}}\ \&\&\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}}\ !=\ \mbox{\hyperlink{_adv_world_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT}})\ ||\ (\mbox{\hyperlink{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}{key}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a437ef08681e7210d6678427030446a54}{LEFT}}\ \&\&\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}}\ !=\ \mbox{\hyperlink{_adv_world_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT}}\ \&\&\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}}\ !=\ \mbox{\hyperlink{_adv_world_8h_a437ef08681e7210d6678427030446a54}{LEFT}})\ ||\ (\mbox{\hyperlink{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}{key}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a1965eaca47dbf3f87acdafc2208f04eb}{UP}}\ \&\&\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}}\ !=\ \mbox{\hyperlink{_adv_world_8h_a4193cd1c8c2e6ebd0e056fa2364a663f}{DOWN}}\ \&\&\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}}\ !=\ \mbox{\hyperlink{_adv_world_8h_a1965eaca47dbf3f87acdafc2208f04eb}{UP}})\ ||\ (\mbox{\hyperlink{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}{key}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a4193cd1c8c2e6ebd0e056fa2364a663f}{DOWN}}\ \&\&\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}}\ !=\ \mbox{\hyperlink{_adv_world_8h_a1965eaca47dbf3f87acdafc2208f04eb}{UP}}\ \&\&\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}}\ !=\ \mbox{\hyperlink{_adv_world_8h_a4193cd1c8c2e6ebd0e056fa2364a663f}{DOWN}}))}
+\DoxyCodeLine{00527\ }
+\DoxyCodeLine{00528\ \ \ \ \ \{}
+\DoxyCodeLine{00529\ }
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a63f972d7e05d93c97d5764c956b84e9d}{bend\_no}}++;}
+\DoxyCodeLine{00531\ }
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_a63f972d7e05d93c97d5764c956b84e9d}{bend\_no}}]\ =\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}};}
+\DoxyCodeLine{00533\ }
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}}\ =\ \mbox{\hyperlink{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}{key}};}
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}{key}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a1965eaca47dbf3f87acdafc2208f04eb}{UP}})}
+\DoxyCodeLine{00537\ }
+\DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}-\/-\/;}
+\DoxyCodeLine{00539\ }
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}{key}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a4193cd1c8c2e6ebd0e056fa2364a663f}{DOWN}})}
+\DoxyCodeLine{00541\ }
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}++;}
+\DoxyCodeLine{00543\ }
+\DoxyCodeLine{00544\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}{key}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT}})}
+\DoxyCodeLine{00545\ }
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}++;}
+\DoxyCodeLine{00547\ }
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}{key}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a437ef08681e7210d6678427030446a54}{LEFT}})}
+\DoxyCodeLine{00549\ }
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}-\/-\/;}
+\DoxyCodeLine{00551\ }
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a678e66228c0453fbbe74a605bcc27c51}{Move}}();}
+\DoxyCodeLine{00553\ \ \ \ \ \}}
+\DoxyCodeLine{00554\ }
+\DoxyCodeLine{00555\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}{key}}\ ==\ 27)}
+\DoxyCodeLine{00556\ }
+\DoxyCodeLine{00557\ \ \ \ \ \{}
+\DoxyCodeLine{00558\ }
+\DoxyCodeLine{00559\ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00560\ }
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ exit(0);}
+\DoxyCodeLine{00562\ \ \ \ \ \}}
+\DoxyCodeLine{00563\ }
+\DoxyCodeLine{00564\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00565\ }
+\DoxyCodeLine{00566\ \ \ \ \ \{}
+\DoxyCodeLine{00567\ }
+\DoxyCodeLine{00568\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)a"{}});}
+\DoxyCodeLine{00569\ }
+\DoxyCodeLine{00570\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a678e66228c0453fbbe74a605bcc27c51}{Move}}();}
+\DoxyCodeLine{00571\ \ \ \ \ \}}
+\DoxyCodeLine{00572\ \}}
+\DoxyCodeLine{00573\ }
+\DoxyCodeLine{00574\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_ae824443b3f661414ba1f2718e17fe97d}{gotoxy}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}})}
+\DoxyCodeLine{00575\ \{}
+\DoxyCodeLine{00576\ }
+\DoxyCodeLine{00577\ \ \ \ \ COORD\ coord;}
+\DoxyCodeLine{00578\ }
+\DoxyCodeLine{00579\ \ \ \ \ coord.X\ =\ \mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}};}
+\DoxyCodeLine{00580\ }
+\DoxyCodeLine{00581\ \ \ \ \ coord.Y\ =\ \mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}};}
+\DoxyCodeLine{00582\ }
+\DoxyCodeLine{00583\ \ \ \ \ SetConsoleCursorPosition(GetStdHandle(STD\_OUTPUT\_HANDLE),\ coord);}
+\DoxyCodeLine{00584\ \}}
+\DoxyCodeLine{00585\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}})}
+\DoxyCodeLine{00586\ \{}
+\DoxyCodeLine{00587\ \ \ \ \ HANDLE\ a;}
+\DoxyCodeLine{00588\ \ \ \ \ COORD\ b;}
+\DoxyCodeLine{00589\ \ \ \ \ fflush(stdout);}
+\DoxyCodeLine{00590\ \ \ \ \ b.X\ =\ \mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}};}
+\DoxyCodeLine{00591\ \ \ \ \ b.Y\ =\ \mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}};}
+\DoxyCodeLine{00592\ \ \ \ \ a\ =\ GetStdHandle(STD\_OUTPUT\_HANDLE);}
+\DoxyCodeLine{00593\ \ \ \ \ SetConsoleCursorPosition(a,\ b);}
+\DoxyCodeLine{00594\ \}}
+\DoxyCodeLine{00595\ }
+\DoxyCodeLine{00596\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a8ecb72ff0fd235afbf997e25815a13d5}{Down}}()}
+\DoxyCodeLine{00597\ \{}
+\DoxyCodeLine{00598\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}};}
+\DoxyCodeLine{00599\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ =\ 0;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ <=\ (\mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ -\/\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_a63f972d7e05d93c97d5764c956b84e9d}{bend\_no}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}})\ \&\&\ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ <\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}};\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{00600\ \ \ \ \ \{}
+\DoxyCodeLine{00601\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(\mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}},\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ -\/\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}});}
+\DoxyCodeLine{00602\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ ==\ 0)}
+\DoxyCodeLine{00604\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}v"{}});}
+\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00606\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{00607\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00608\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ =\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}};}
+\DoxyCodeLine{00609\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ =\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ -\/\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}};}
+\DoxyCodeLine{00610\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}++;}
+\DoxyCodeLine{00611\ \ \ \ \ \}}
+\DoxyCodeLine{00612\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a7ea3861fdbe2c138a4768c1bc57edc06}{Bend}}();}
+\DoxyCodeLine{00613\ \ \ \ \ \textcolor{keywordflow}{if}\ (!kbhit())}
+\DoxyCodeLine{00614\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}++;}
+\DoxyCodeLine{00615\ \}}
+\DoxyCodeLine{00616\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_aad49cedd771da5ce9872fb364e8d6373}{Delay}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ k)}
+\DoxyCodeLine{00617\ \{}
+\DoxyCodeLine{00618\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_afc01ad71e5a2a27ebbbe7b7983cbb02b}{Score}}();}
+\DoxyCodeLine{00619\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}};}
+\DoxyCodeLine{00620\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ =\ 0;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ <=\ (10000000);\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{00621\ \ \ \ \ \ \ \ \ ;}
+\DoxyCodeLine{00622\ \}}
+\DoxyCodeLine{00623\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a4ae4a6c601765f289ae97678bb8a4d6a}{ExitGame}}()}
+\DoxyCodeLine{00624\ \{}
+\DoxyCodeLine{00625\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}},\ check\ =\ 0;}
+\DoxyCodeLine{00626\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ =\ 4;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ <\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}};\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{00628\ \ \ \ \ \{}
+\DoxyCodeLine{00629\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[0].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ \&\&\ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[0].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}})}
+\DoxyCodeLine{00630\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ \ \ \ \ check++;}
+\DoxyCodeLine{00633\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00634\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}}\ ||\ check\ !=\ 0)}
+\DoxyCodeLine{00635\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00636\ \ \ \ \ \}}
+\DoxyCodeLine{00637\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ <=\ 10\ ||\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ >=\ 70\ ||\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ <=\ 10\ ||\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ >=\ 30\ ||\ check\ !=\ 0)}
+\DoxyCodeLine{00638\ \ \ \ \ \{}
+\DoxyCodeLine{00639\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_adf488ff0ce8098cd956c07890cbc5d50}{life}}-\/-\/;}
+\DoxyCodeLine{00640\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_adf488ff0ce8098cd956c07890cbc5d50}{life}}\ >\ 0)}
+\DoxyCodeLine{00641\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00642\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ =\ 25;}
+\DoxyCodeLine{00643\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ =\ 20;}
+\DoxyCodeLine{00644\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a63f972d7e05d93c97d5764c956b84e9d}{bend\_no}}\ =\ 0;}
+\DoxyCodeLine{00645\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a886d551d5381dc3e53f17825ffc51641}{direction}}\ =\ \mbox{\hyperlink{_adv_world_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT}};}
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a678e66228c0453fbbe74a605bcc27c51}{Move}}();}
+\DoxyCodeLine{00647\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00648\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00649\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00650\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tYou\ have\ no\ more\ life!\ "{}});}
+\DoxyCodeLine{00651\ \ \ \ \ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00652\ }
+\DoxyCodeLine{00653\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_a40a74cbfd7d2271a5a5caeb629197dd1}{Scoreonly}}()\ >\ 9)}
+\DoxyCodeLine{00654\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00655\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}color\ 2"{}});}
+\DoxyCodeLine{00656\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00657\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00658\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00659\ }
+\DoxyCodeLine{00660\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_(:\ *|C\ |\ O\ |\ N\ |\ G\ |\ R\ |\ A\ |\ T\ |\ U\ |\ L\ |\ A|\ T\ |\ I\ |\ O\ |\ N\ |\ S|*\ :)\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00661\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00662\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00663\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tCongratulations\ on\ winning\ the\ Round\ of\ Hunger!\(\backslash\)n"{}});}
+\DoxyCodeLine{00664\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00665\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tYou\ have\ proven\ yourself\ to\ be\ a\ skilled\ player\ and\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00666\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00667\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)thave\ earned\ the\ right\ to\ move\ on\ to\ the\ next\ round\ of\ the\ game.\(\backslash\)n"{}});}
+\DoxyCodeLine{00668\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00669\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tYour\ strategy\ and\ quick\ move\ have\ paid\ off,\ and\ you\ should\ be\ proud\ of\ your\ accomplishment.\(\backslash\)n"{}});}
+\DoxyCodeLine{00670\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00671\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tYou\ have\ successfully\ hunted\ enough\ food\ to\ move\ on\ to\ the\ next\ round,\ and\ we\ look\ forward\ to\ seeing\ you\ there.\(\backslash\)n"{}});}
+\DoxyCodeLine{00672\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00673\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tWe\ hope\ you\ have\ a\ great\ time\ in\ the\ rest\ of\ Adventurous\ World\ and\(\backslash\)n"{}});}
+\DoxyCodeLine{00674\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00675\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tWish\ you\ the\ best\ of\ luck\ as\ you\ progress\ through\ the\ game.\ Well\ done!\(\backslash\)n"{}});}
+\DoxyCodeLine{00676\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(1000);}
+\DoxyCodeLine{00677\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00678\ }
+\DoxyCodeLine{00679\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tAre\ you\ ready\ to\ face\ the\ new\ round\ ??\ \(\backslash\)n\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00680\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00681\ }
+\DoxyCodeLine{00682\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tpress\ any\ key\ for\ next\ round\(\backslash\)n"{}});}
+\DoxyCodeLine{00683\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getch();}
+\DoxyCodeLine{00684\ }
+\DoxyCodeLine{00685\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00686\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}color\ 3"{}});}
+\DoxyCodeLine{00687\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a901b282dd93ce60ecdaffa60344416b2}{wordgame}}();}
+\DoxyCodeLine{00688\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00689\ }
+\DoxyCodeLine{00690\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00691\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00692\ }
+\DoxyCodeLine{00693\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00694\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00695\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00696\ }
+\DoxyCodeLine{00697\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_(::::*SAD!!:::::)\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00698\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tUnfortunately,\ you\ have\ been\ eliminated\ from\ the\ Round\ of\ Hunger\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00699\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tbecause\ you\ were\ unable\ to\ hunt\ enough\ food\ to\ move\ on\ to\ the\ next\ round\(\backslash\)n"{}});}
+\DoxyCodeLine{00700\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tWhile\ it\ is\ unfortunate\ that\ you\ were\ unable\ to\ progress\ further\ in\ the\ game,\(\backslash\)n"{}});}
+\DoxyCodeLine{00701\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)twe\ hope\ that\ you\ have\ enjoyed\ your\ time\ in\ Adventurous\ World\ and\ appreciate\ your\ participation\(\backslash\)n"{}});}
+\DoxyCodeLine{00702\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tThank\ you\ for\ playing,\ and\ we\ hope\ you\ will\ have\ the\ opportunity\ to\ try\ again\ in\ the\ future.\(\backslash\)n"{}});}
+\DoxyCodeLine{00703\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tBetter\ luck\ next\ time!\(\backslash\)n"{}});}
+\DoxyCodeLine{00704\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)n"{}});}
+\DoxyCodeLine{00705\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Sleep(5000);}
+\DoxyCodeLine{00706\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ main();}
+\DoxyCodeLine{00707\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00708\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00709\ \ \ \ \ \}}
+\DoxyCodeLine{00710\ \}}
+\DoxyCodeLine{00711\ }
+\DoxyCodeLine{00712\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a1951985f3541f595fc7800fbd6dc5535}{Food}}()}
+\DoxyCodeLine{00713\ \{}
+\DoxyCodeLine{00714\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ ==\ \mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ \&\&\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ ==\ \mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}})}
+\DoxyCodeLine{00715\ \ \ \ \ \{}
+\DoxyCodeLine{00716\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}}++;}
+\DoxyCodeLine{00717\ \ \ \ \ \ \ \ \ time\_t\ a;}
+\DoxyCodeLine{00718\ \ \ \ \ \ \ \ \ a\ =\ time(0);}
+\DoxyCodeLine{00719\ \ \ \ \ \ \ \ \ srand(a);}
+\DoxyCodeLine{00720\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ =\ rand()\ \%\ 70;}
+\DoxyCodeLine{00721\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ <=\ 10)}
+\DoxyCodeLine{00722\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ +=\ 11;}
+\DoxyCodeLine{00723\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ =\ rand()\ \%\ 30;}
+\DoxyCodeLine{00724\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ <=\ 10)}
+\DoxyCodeLine{00725\ }
+\DoxyCodeLine{00726\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ +=\ 11;}
+\DoxyCodeLine{00727\ \ \ \ \ \}}
+\DoxyCodeLine{00728\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ ==\ 0)}
+\DoxyCodeLine{00731\ \ \ \ \ \{}
+\DoxyCodeLine{00732\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ =\ rand()\ \%\ 70;}
+\DoxyCodeLine{00733\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ <=\ 10)}
+\DoxyCodeLine{00734\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ +=\ 11;}
+\DoxyCodeLine{00735\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ =\ rand()\ \%\ 30;}
+\DoxyCodeLine{00736\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ <=\ 10)}
+\DoxyCodeLine{00737\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ +=\ 11;}
+\DoxyCodeLine{00738\ \ \ \ \ \}}
+\DoxyCodeLine{00739\ \}}
+\DoxyCodeLine{00740\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_ac268cc4e608aa0068c30f2e4a652b084}{Left}}()}
+\DoxyCodeLine{00741\ \{}
+\DoxyCodeLine{00742\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}};}
+\DoxyCodeLine{00743\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ =\ 0;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ <=\ (\mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_a63f972d7e05d93c97d5764c956b84e9d}{bend\_no}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ -\/\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}})\ \&\&\ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ <\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}};\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{00744\ \ \ \ \ \{}
+\DoxyCodeLine{00745\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}((\mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ +\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}),\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}});}
+\DoxyCodeLine{00746\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00747\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ ==\ 0)}
+\DoxyCodeLine{00748\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}<"{}});}
+\DoxyCodeLine{00749\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00750\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{00751\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00752\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ =\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ +\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}};}
+\DoxyCodeLine{00753\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ =\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}};}
+\DoxyCodeLine{00754\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}++;}
+\DoxyCodeLine{00755\ \ \ \ \ \}}
+\DoxyCodeLine{00756\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a7ea3861fdbe2c138a4768c1bc57edc06}{Bend}}();}
+\DoxyCodeLine{00757\ \ \ \ \ \textcolor{keywordflow}{if}\ (!kbhit())}
+\DoxyCodeLine{00758\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}-\/-\/;}
+\DoxyCodeLine{00759\ \}}
+\DoxyCodeLine{00760\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a1b0e394cd24dadbcff32387d3036da5f}{Right}}()}
+\DoxyCodeLine{00761\ \{}
+\DoxyCodeLine{00762\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}};}
+\DoxyCodeLine{00763\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ =\ 0;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ <=\ (\mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ -\/\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_a63f972d7e05d93c97d5764c956b84e9d}{bend\_no}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}})\ \&\&\ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ <\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}};\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{00764\ \ \ \ \ \{}
+\DoxyCodeLine{00766\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ =\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ -\/\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}};}
+\DoxyCodeLine{00767\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ =\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}};}
+\DoxyCodeLine{00768\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(\mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}},\ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}});}
+\DoxyCodeLine{00769\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00770\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ ==\ 0)}
+\DoxyCodeLine{00771\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}>"{}});}
+\DoxyCodeLine{00772\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00773\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{00774\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00779\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}++;}
+\DoxyCodeLine{00780\ \ \ \ \ \}}
+\DoxyCodeLine{00781\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a7ea3861fdbe2c138a4768c1bc57edc06}{Bend}}();}
+\DoxyCodeLine{00782\ \ \ \ \ \textcolor{keywordflow}{if}\ (!kbhit())}
+\DoxyCodeLine{00783\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}++;}
+\DoxyCodeLine{00784\ \}}
+\DoxyCodeLine{00785\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a7ea3861fdbe2c138a4768c1bc57edc06}{Bend}}()}
+\DoxyCodeLine{00786\ \{}
+\DoxyCodeLine{00787\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}},\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}},\ diff;}
+\DoxyCodeLine{00788\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ =\ \mbox{\hyperlink{_adv_world_8h_a63f972d7e05d93c97d5764c956b84e9d}{bend\_no}};\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ >=\ 0\ \&\&\ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ <\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}};\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}-\/-\/)}
+\DoxyCodeLine{00789\ \ \ \ \ \{}
+\DoxyCodeLine{00790\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ ==\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ -\/\ 1].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}})}
+\DoxyCodeLine{00791\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00792\ \ \ \ \ \ \ \ \ \ \ \ \ diff\ =\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ -\/\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ -\/\ 1].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}};}
+\DoxyCodeLine{00793\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (diff\ <\ 0)}
+\DoxyCodeLine{00794\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}\ =\ 1;\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}\ <=\ (-\/diff);\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}++)}
+\DoxyCodeLine{00795\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00796\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ =\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}};}
+\DoxyCodeLine{00797\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ =\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ +\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}};}
+\DoxyCodeLine{00798\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(\mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}},\ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}});}
+\DoxyCodeLine{00799\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}*"{}});}
+\DoxyCodeLine{00800\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}++;}
+\DoxyCodeLine{00801\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}})}
+\DoxyCodeLine{00802\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00803\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00804\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (diff\ >\ 0)}
+\DoxyCodeLine{00805\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}\ =\ 1;\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}\ <=\ diff;\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}++)}
+\DoxyCodeLine{00806\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00810\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ =\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}};}
+\DoxyCodeLine{00811\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ =\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ -\/\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}};}
+\DoxyCodeLine{00812\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(\mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}},\ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}});}
+\DoxyCodeLine{00813\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}*"{}});}
+\DoxyCodeLine{00814\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}++;}
+\DoxyCodeLine{00815\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}})}
+\DoxyCodeLine{00816\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00817\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00818\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00819\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ ==\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ -\/\ 1].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}})}
+\DoxyCodeLine{00820\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00821\ \ \ \ \ \ \ \ \ \ \ \ \ diff\ =\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ -\/\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ -\/\ 1].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}};}
+\DoxyCodeLine{00822\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (diff\ <\ 0)}
+\DoxyCodeLine{00823\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}\ =\ 1;\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}\ <=\ (-\/diff)\ \&\&\ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ <\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}};\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}++)}
+\DoxyCodeLine{00824\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00828\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ =\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ +\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}};}
+\DoxyCodeLine{00829\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ =\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}};}
+\DoxyCodeLine{00830\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(\mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}},\ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}});}
+\DoxyCodeLine{00831\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}*"{}});}
+\DoxyCodeLine{00832\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}++;}
+\DoxyCodeLine{00833\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}})}
+\DoxyCodeLine{00834\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00835\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00836\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (diff\ >\ 0)}
+\DoxyCodeLine{00837\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}\ =\ 1;\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}\ <=\ diff\ \&\&\ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ <\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}};\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}++)}
+\DoxyCodeLine{00838\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00842\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ =\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ -\/\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}};}
+\DoxyCodeLine{00843\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ =\ \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}};}
+\DoxyCodeLine{00844\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(\mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}},\ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}});}
+\DoxyCodeLine{00845\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}*"{}});}
+\DoxyCodeLine{00846\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}++;}
+\DoxyCodeLine{00847\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ ==\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}})}
+\DoxyCodeLine{00848\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00849\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00850\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00851\ \ \ \ \ \}}
+\DoxyCodeLine{00852\ \}}
+\DoxyCodeLine{00853\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a1038bb98ca722fbe2f7a458d629f6a4d}{Boarder}}()}
+\DoxyCodeLine{00854\ \{}
+\DoxyCodeLine{00855\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00856\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}};}
+\DoxyCodeLine{00857\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(\mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}},\ \mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}});\ }
+\DoxyCodeLine{00859\ \ \ \ \ printf(\textcolor{stringliteral}{"{}O"{}});}
+\DoxyCodeLine{00860\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ =\ 10;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ <\ 71;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{00861\ \ \ \ \ \{}
+\DoxyCodeLine{00862\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}},\ 10);}
+\DoxyCodeLine{00863\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}!"{}});}
+\DoxyCodeLine{00864\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}},\ 30);}
+\DoxyCodeLine{00865\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}!"{}});}
+\DoxyCodeLine{00866\ \ \ \ \ \}}
+\DoxyCodeLine{00867\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ =\ 10;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ <\ 31;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{00868\ \ \ \ \ \{}
+\DoxyCodeLine{00869\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(10,\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}});}
+\DoxyCodeLine{00870\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}!"{}});}
+\DoxyCodeLine{00871\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(70,\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}});}
+\DoxyCodeLine{00872\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}!"{}});}
+\DoxyCodeLine{00873\ \ \ \ \ \}}
+\DoxyCodeLine{00874\ \}}
+\DoxyCodeLine{00875\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_ad3e8ad05a5a7e29f0d3959fed8699cd1}{r2title}}()}
+\DoxyCodeLine{00876\ \{}
+\DoxyCodeLine{00877\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00878\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00879\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00880\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00881\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00882\ }
+\DoxyCodeLine{00883\ \ \ \ \ system(\textcolor{stringliteral}{"{}color\ C"{}});}
+\DoxyCodeLine{00884\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ ::::::\ \ \ \ ::::::\ ::\ \ ::\ ::\ \ \ \ \ ::\ ::::::\ \ \ \ \ ::::::\ ::::::\ \ \ \ ::\ \ \ ::\ ::\ \ ::\ ::\ \ \ \ \ \ ::\ ::::::\ \ \ \ \ ::::::\ ::::::\ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00885\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ ::\ \ ::\ \ \ \ ::\ \ ::\ ::\ \ ::\ ::\ ::\ \ ::\ ::\ \ \ ::\ \ \ \ ::\ \ ::\ ::\ \ \ \ \ \ \ \ ::\ \ \ ::\ ::\ \ ::\ ::\ ::\ \ \ ::\ ::\ \ \ \ \ \ \ \ \ ::\ \ \ \ \ ::\ \ ::\ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00886\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ ::::::\ \ \ \ ::\ \ ::\ ::\ \ ::\ ::\ \ ::\ ::\ ::\ \ \ ::\ \_\_\ ::\ \ ::\ ::::::\ \_\_\ :::::::\ ::\ \ ::\ ::\ \ ::\ \ ::\ ::\ \ ::::::\ ::::::\ ::::::\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00887\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ ::\ \ \ ::\ \ \ ::\ \ ::\ ::\ \ ::\ ::\ \ \ ::::\ ::\ \ \ ::\ \ \ \ ::\ \ ::\ ::\ \ \ \ \ \ \ \ ::\ \ \ ::\ ::\ \ ::\ ::\ \ \ \ ::::\ ::\ \ ::\ \ ::\ ::\ \ \ \ \ ::\ \ \ ::\ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00888\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ ::\ \ \ \ ::\ \ ::::::\ ::::::\ ::\ \ \ \ \ ::\ ::::::\ \ \ \ \ ::::::\ ::\ \ \ \ \ \ \ \ ::\ \ \ ::\ ::::::\ ::\ \ \ \ \ \ ::\ ::::::\ \ ::\ ::::::\ ::\ \ \ \ ::\ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{00889\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00890\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00891\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00892\ \}\ }
+\DoxyCodeLine{00893\ }
+\DoxyCodeLine{00894\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a03aef505ffcb6ae91fd2a4b372dcf290}{r2abt}}()}
+\DoxyCodeLine{00895\ \{}
+\DoxyCodeLine{00896\ \ \ \ \ Sleep(800);}
+\DoxyCodeLine{00897\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_ad3e8ad05a5a7e29f0d3959fed8699cd1}{r2title}}();}
+\DoxyCodeLine{00898\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ Welcome\ \%s\ \ to\ the\ Round\ of\ Hunger!\ \(\backslash\)n\ \ "{}},\ \mbox{\hyperlink{_adv_world_8h_ac71a110c00e8fab4884bca7f193fc7b4}{p}});}
+\DoxyCodeLine{00899\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00900\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ In\ this\ round,\ you\ will\ take\ control\ of\ a\ snake\ and\ guide\ it\ through\ a\ series\ of\ obstacles,\ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00901\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00902\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ collecting\ food\ along\ the\ way\ to\ keep\ its\ hunger\ at\ bay.\ As\ the\ snake\ grows\ longer,\ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00903\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00904\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ it\ will\ become\ more\ difficult\ to\ navigate\ through\ the\ obstacles\ and\ avoid\ running\ into\ walls\ or\ its\ own\ body.\(\backslash\)n\ "{}});}
+\DoxyCodeLine{00905\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00906\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\ "{}});}
+\DoxyCodeLine{00907\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\ "{}});}
+\DoxyCodeLine{00908\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\ "{}});}
+\DoxyCodeLine{00909\ }
+\DoxyCodeLine{00910\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00911\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tCONDITION:\(\backslash\)n\ \ "{}});}
+\DoxyCodeLine{00912\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00913\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tIn\ this\ round,\ you\ are\ given\ three\ lives\ and\ \ \ \(\backslash\)n\ \ "{}});}
+\DoxyCodeLine{00914\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00915\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tmust\ score\ at\ least\ 10\ points\ in\ order\ to\ move\ on\ to\ the\ next\ round.\ \ \(\backslash\)n\ \ "{}});}
+\DoxyCodeLine{00916\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00917\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tIf\ you\ are\ unable\ to\ score\ 10\ points\ before\ losing\ all\ three\ of\ your\ lives,\ \ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00918\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00919\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tyou\ will\ be\ eliminated\ from\ the\ game.\ \(\backslash\)n\ \ "{}});}
+\DoxyCodeLine{00920\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00921\ }
+\DoxyCodeLine{00922\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00923\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00924\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00925\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00926\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00927\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ Be\ sure\ to\ use\ your\ skills\ and\ strategy\ to\ your\ advantage\ and\ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00928\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00929\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tdo\ your\ best\ to\ earn\ a\ place\ in\ the\ next\ round\ of\ the\ game.\(\backslash\)n\ "{}});}
+\DoxyCodeLine{00930\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00931\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tGood\ luck,\ and\ we\ hope\ you\ have\ a\ great\ time\ in\ the\ Round\ of\ Hunger!\(\backslash\)n\ "{}});}
+\DoxyCodeLine{00932\ }
+\DoxyCodeLine{00933\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00934\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00935\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00936\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tPress\ any\ key\ to\ go"{}});}
+\DoxyCodeLine{00937\ \ \ \ \ getch();}
+\DoxyCodeLine{00938\ }
+\DoxyCodeLine{00939\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00940\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00941\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00942\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00943\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00944\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00945\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00946\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00947\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00948\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tThe\ game\ is\ starting\ now!.....................\ \(\backslash\)n\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00949\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00950\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tUse\ the\ arrow\ keys\ to\ control\ the\ movement\ of\ the\ snake\ \(\backslash\)n\ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00951\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00952\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tpress\ any\ key\ if\ you\ need\ to\ hold\ the\ snake\ \(\backslash\)n\ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00953\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{00954\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tThe\ snake\ will\ be\ moving\ quickly,\ so\ be\ ready\ to\ react\ and\ make\ sharp\ turns\ as\ needed.\ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{00955\ }
+\DoxyCodeLine{00956\ \ \ \ \ Sleep(4000);}
+\DoxyCodeLine{00957\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00958\ \}}
+\DoxyCodeLine{00959\ }
+\DoxyCodeLine{00960\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_afc01ad71e5a2a27ebbbe7b7983cbb02b}{Score}}()}
+\DoxyCodeLine{00961\ \{}
+\DoxyCodeLine{00962\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{finalround_8h_aef160b7437d94056f1dc59646cd5b87d}{score}};}
+\DoxyCodeLine{00963\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(20,\ 8);}
+\DoxyCodeLine{00964\ \ \ \ \ \mbox{\hyperlink{finalround_8h_aef160b7437d94056f1dc59646cd5b87d}{score}}\ =\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}}\ -\/\ 5;}
+\DoxyCodeLine{00965\ \ \ \ \ printf(\textcolor{stringliteral}{"{}SCORE\ :\ \%d"{}},\ (\mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}}\ -\/\ 5));}
+\DoxyCodeLine{00966\ \ \ \ \ \mbox{\hyperlink{finalround_8h_aef160b7437d94056f1dc59646cd5b87d}{score}}\ =\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}}\ -\/\ 5;}
+\DoxyCodeLine{00967\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(50,\ 8);}
+\DoxyCodeLine{00968\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Life\ :\ \%d"{}},\ \mbox{\hyperlink{_adv_world_8h_adf488ff0ce8098cd956c07890cbc5d50}{life}});}
+\DoxyCodeLine{00969\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{finalround_8h_aef160b7437d94056f1dc59646cd5b87d}{score}};}
+\DoxyCodeLine{00970\ \}}
+\DoxyCodeLine{00971\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_a40a74cbfd7d2271a5a5caeb629197dd1}{Scoreonly}}()}
+\DoxyCodeLine{00972\ \{}
+\DoxyCodeLine{00973\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{finalround_8h_aef160b7437d94056f1dc59646cd5b87d}{score}}\ =\ \mbox{\hyperlink{_adv_world_8h_afc01ad71e5a2a27ebbbe7b7983cbb02b}{Score}}();}
+\DoxyCodeLine{00974\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00975\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{finalround_8h_aef160b7437d94056f1dc59646cd5b87d}{score}};}
+\DoxyCodeLine{00976\ \}}
+\DoxyCodeLine{00977\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_aa1e4dcf406c3281b132a396a60965e0f}{Up}}()}
+\DoxyCodeLine{00978\ \{}
+\DoxyCodeLine{00979\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}};}
+\DoxyCodeLine{00980\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ =\ 0;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ <=\ (\mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}}[\mbox{\hyperlink{_adv_world_8h_a63f972d7e05d93c97d5764c956b84e9d}{bend\_no}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ -\/\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}})\ \&\&\ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ <\ \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}};\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{00981\ \ \ \ \ \{}
+\DoxyCodeLine{00982\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{GotoXY}}(\mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}},\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ +\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}});}
+\DoxyCodeLine{00983\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00984\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ ==\ 0)}
+\DoxyCodeLine{00985\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\string^"{}});}
+\DoxyCodeLine{00986\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00987\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}="{}});}
+\DoxyCodeLine{00988\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00989\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}}\ =\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a6150e0515f7202e2fb518f7206ed97dc}{x}};}
+\DoxyCodeLine{00990\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}}[\mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}].\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ =\ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}\ +\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}};}
+\DoxyCodeLine{00991\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}++;}
+\DoxyCodeLine{00992\ \ \ \ \ \}}
+\DoxyCodeLine{00993\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a7ea3861fdbe2c138a4768c1bc57edc06}{Bend}}();}
+\DoxyCodeLine{00994\ \ \ \ \ \textcolor{keywordflow}{if}\ (!kbhit())}
+\DoxyCodeLine{00995\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}.\mbox{\hyperlink{structcoordinate_a0a2f84ed7838f07779ae24c5a9086d33}{y}}-\/-\/;}
+\DoxyCodeLine{00996\ \}}
+\DoxyCodeLine{00998\ }
+\DoxyCodeLine{00999\ \textcolor{preprocessor}{\#define\ NUM\_WORDS\ 18}}
+\DoxyCodeLine{01000\ \textcolor{preprocessor}{\#define\ WORD\_LENGTH\ 20}}
+\DoxyCodeLine{01001\ \textcolor{preprocessor}{\#define\ TIME\_LIMIT\ 60\ }}
+\DoxyCodeLine{01002\ }
+\DoxyCodeLine{01003\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[\mbox{\hyperlink{_adv_world_8h_a2d0895da0d518a9553f025d8f472dca7}{NUM\_WORDS}}][\mbox{\hyperlink{_adv_world_8h_a4c8b6e3f5b517ddc1b9f9670ea0ead8f}{WORD\_LENGTH}}];}
+\DoxyCodeLine{01005\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_adv_world_8h_a87a72f0f663c9b9ca5bd22ccc94d74f0}{used}}[\mbox{\hyperlink{_adv_world_8h_a2d0895da0d518a9553f025d8f472dca7}{NUM\_WORDS}}];}
+\DoxyCodeLine{01007\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}},\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}},\ \mbox{\hyperlink{_adv_world_8h_aef689a6cb86e920f508e6d5e57e01c3f}{numCorrect}}\ =\ 0;}
+\DoxyCodeLine{01009\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{_adv_world_8h_a614441b95148070e68b155910d9ecc34}{guess}}[\mbox{\hyperlink{_adv_world_8h_a4c8b6e3f5b517ddc1b9f9670ea0ead8f}{WORD\_LENGTH}}];}
+\DoxyCodeLine{01011\ time\_t\ \mbox{\hyperlink{_adv_world_8h_aaf564fc30a2a8624cf917e282281a500}{startTime}},\ \mbox{\hyperlink{_adv_world_8h_a1f1e169e482467aaf615639bb3467f09}{endTime}};}
+\DoxyCodeLine{01013\ }
+\DoxyCodeLine{01014\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a901b282dd93ce60ecdaffa60344416b2}{wordgame}}()}
+\DoxyCodeLine{01015\ \{}
+\DoxyCodeLine{01016\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a8df1a5289cd00acce243dc39cca94cc9}{Guess}}();}
+\DoxyCodeLine{01017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a8ceb7cbdec161165184f87fcfa8dca45}{r3}}();}
+\DoxyCodeLine{01018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_aa8cb971f907b1d81196ded30eb9c758c}{r3abt}}();}
+\DoxyCodeLine{01019\ }
+\DoxyCodeLine{01021\ }
+\DoxyCodeLine{01023\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ =\ 0;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ <\ \mbox{\hyperlink{_adv_world_8h_a2d0895da0d518a9553f025d8f472dca7}{NUM\_WORDS}};\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{01024\ \ \ \ \ \{}
+\DoxyCodeLine{01025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a87a72f0f663c9b9ca5bd22ccc94d74f0}{used}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}]\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{01026\ \ \ \ \ \}}
+\DoxyCodeLine{01027\ }
+\DoxyCodeLine{01029\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[0],\ \textcolor{stringliteral}{"{}computer"{}});}
+\DoxyCodeLine{01030\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[1],\ \textcolor{stringliteral}{"{}banana"{}});}
+\DoxyCodeLine{01031\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[2],\ \textcolor{stringliteral}{"{}shoes"{}});}
+\DoxyCodeLine{01032\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[3],\ \textcolor{stringliteral}{"{}pencil"{}});}
+\DoxyCodeLine{01033\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[4],\ \textcolor{stringliteral}{"{}pen"{}});}
+\DoxyCodeLine{01034\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[5],\ \textcolor{stringliteral}{"{}momo"{}});}
+\DoxyCodeLine{01035\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[6],\ \textcolor{stringliteral}{"{}hammer"{}});}
+\DoxyCodeLine{01036\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[7],\ \textcolor{stringliteral}{"{}book"{}});}
+\DoxyCodeLine{01037\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[8],\ \textcolor{stringliteral}{"{}keyboard"{}});}
+\DoxyCodeLine{01038\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[10],\ \textcolor{stringliteral}{"{}math"{}});}
+\DoxyCodeLine{01039\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[11],\ \textcolor{stringliteral}{"{}mother"{}});}
+\DoxyCodeLine{01040\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[12],\ \textcolor{stringliteral}{"{}brush"{}});}
+\DoxyCodeLine{01041\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[13],\ \textcolor{stringliteral}{"{}crush"{}});}
+\DoxyCodeLine{01042\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[14],\ \textcolor{stringliteral}{"{}marker"{}});}
+\DoxyCodeLine{01043\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[15],\ \textcolor{stringliteral}{"{}glass"{}});}
+\DoxyCodeLine{01044\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[16],\ \textcolor{stringliteral}{"{}fan"{}});}
+\DoxyCodeLine{01045\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[17],\ \textcolor{stringliteral}{"{}corona"{}});}
+\DoxyCodeLine{01046\ \ \ \ \ strcpy(\mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[18],\ \textcolor{stringliteral}{"{}blanket"{}});}
+\DoxyCodeLine{01047\ }
+\DoxyCodeLine{01048\ \ \ \ \ ;}
+\DoxyCodeLine{01050\ \ \ \ \ Sleep(300);}
+\DoxyCodeLine{01051\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a8ceb7cbdec161165184f87fcfa8dca45}{r3}}();}
+\DoxyCodeLine{01052\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{01053\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aa8cb971f907b1d81196ded30eb9c758c}{r3abt}}();}
+\DoxyCodeLine{01054\ }
+\DoxyCodeLine{01055\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01056\ }
+\DoxyCodeLine{01057\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01058\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01059\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01060\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01061\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01062\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a8ceb7cbdec161165184f87fcfa8dca45}{r3}}();}
+\DoxyCodeLine{01063\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01064\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01065\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01066\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01067\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01068\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01069\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01070\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{01071\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tGet\ ready!\ The\ words\ you\ need\ to\ remember\ will\ now\ be\ presented.\ \(\backslash\)n"{}});}
+\DoxyCodeLine{01072\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{01073\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tPay\ close\ attention,\ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{01074\ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{01075\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tAs\ you\ only\ have\ a\ few\ seconds\ to\ absorb\ the\ information\ before\ they\ disappear.\ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{01076\ }
+\DoxyCodeLine{01077\ \ \ \ \ Sleep(3000);}
+\DoxyCodeLine{01078\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{01079\ }
+\DoxyCodeLine{01081\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_Presenting\ the\ Words\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\ \(\backslash\)n"{}});}
+\DoxyCodeLine{01082\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{01083\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01084\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ =\ 0;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ <\ \mbox{\hyperlink{_adv_world_8h_a2d0895da0d518a9553f025d8f472dca7}{NUM\_WORDS}};\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{01085\ \ \ \ \ \{}
+\DoxyCodeLine{01086\ \ \ \ \ \ \ \ \ Sleep(1000);}
+\DoxyCodeLine{01087\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\ \(\backslash\)n\ \(\backslash\)n\ "{}},\ \mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}]);}
+\DoxyCodeLine{01088\ \ \ \ \ \}}
+\DoxyCodeLine{01089\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \(\backslash\)n"{}});}
+\DoxyCodeLine{01090\ \ \ \ \ sleep(3);}
+\DoxyCodeLine{01092\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{01094\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01095\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01096\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01097\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01098\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01099\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01100\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01101\ }
+\DoxyCodeLine{01102\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01103\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01104\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01105\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01106\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01107\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01108\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01109\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ your\ time\ is\ being\ started............\(\backslash\)n\ \(\backslash\)n"{}});}
+\DoxyCodeLine{01110\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ Recall\ your\ mind!!\(\backslash\)n\ \(\backslash\)n"{}});}
+\DoxyCodeLine{01111\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ Be\ ready\ with\ your\ hands\ on\ keyboard!!\ \(\backslash\)n\ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{01112\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ Press\ enter\ to\ Enter\ next\ word!\ \(\backslash\)n\ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{01113\ \ \ \ \ Sleep(4000);}
+\DoxyCodeLine{01114\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{01115\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a8df1a5289cd00acce243dc39cca94cc9}{Guess}}();}
+\DoxyCodeLine{01117\ }
+\DoxyCodeLine{01119\ \}}
+\DoxyCodeLine{01120\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a8df1a5289cd00acce243dc39cca94cc9}{Guess}}()}
+\DoxyCodeLine{01121\ \{}
+\DoxyCodeLine{01122\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01123\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01124\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01125\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01126\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01127\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01128\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01129\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{01130\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\ \(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ Your\ time\ is\ running\ out!\ Quickly\ enter\ the\ words\ you\ have\ retained\ \ \(\backslash\)n\ \(\backslash\)n\ \(\backslash\)n\ \ \ "{}});}
+\DoxyCodeLine{01131\ \ \ \ \ Sleep(200);}
+\DoxyCodeLine{01132\ }
+\DoxyCodeLine{01133\ \ \ \ \ time(\&\mbox{\hyperlink{_adv_world_8h_aaf564fc30a2a8624cf917e282281a500}{startTime}});}
+\DoxyCodeLine{01135\ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{01136\ \ \ \ \ \{}
+\DoxyCodeLine{01137\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\ \ \(\backslash\)t\(\backslash\)t\(\backslash\)t\ Your\ word\ \ :\ \ "{}});}
+\DoxyCodeLine{01138\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%s"{}},\ \mbox{\hyperlink{_adv_world_8h_a614441b95148070e68b155910d9ecc34}{guess}});}
+\DoxyCodeLine{01139\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01140\ }
+\DoxyCodeLine{01142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}\ =\ 0;\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}\ <\ \mbox{\hyperlink{_adv_world_8h_a2d0895da0d518a9553f025d8f472dca7}{NUM\_WORDS}};\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}++)}
+\DoxyCodeLine{01143\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{_adv_world_8h_a87a72f0f663c9b9ca5bd22ccc94d74f0}{used}}[\mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}]\ \&\&\ strcmp(\mbox{\hyperlink{_adv_world_8h_a614441b95148070e68b155910d9ecc34}{guess}},\ \mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}}[\mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}])\ ==\ 0)}
+\DoxyCodeLine{01145\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{01146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_aef689a6cb86e920f508e6d5e57e01c3f}{numCorrect}}++;}
+\DoxyCodeLine{01147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a87a72f0f663c9b9ca5bd22ccc94d74f0}{used}}[\mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{01149\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01150\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{01151\ \ \ \ \ \ \ \ \ time(\&\mbox{\hyperlink{_adv_world_8h_a1f1e169e482467aaf615639bb3467f09}{endTime}});}
+\DoxyCodeLine{01153\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (difftime(\mbox{\hyperlink{_adv_world_8h_a1f1e169e482467aaf615639bb3467f09}{endTime}},\ \mbox{\hyperlink{_adv_world_8h_aaf564fc30a2a8624cf917e282281a500}{startTime}})\ <=\ \mbox{\hyperlink{_adv_world_8h_acb7e51d1df3047c08c50ae6682a6cd70}{TIME\_LIMIT}});}
+\DoxyCodeLine{01154\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tYour\ time\ is\ over\ \(\backslash\)n\ \(\backslash\)n\ \ your\ are\ succesful\ to\ guess\ \ \ \%d\ Words\ "{}},\ \mbox{\hyperlink{_adv_world_8h_aef689a6cb86e920f508e6d5e57e01c3f}{numCorrect}});}
+\DoxyCodeLine{01155\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_aef689a6cb86e920f508e6d5e57e01c3f}{numCorrect}}\ >\ 9)}
+\DoxyCodeLine{01156\ }
+\DoxyCodeLine{01157\ \ \ \ \ \{}
+\DoxyCodeLine{01158\ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{01159\ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}color\ 2"{}});}
+\DoxyCodeLine{01160\ \ \ \ \ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{01161\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01162\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01163\ }
+\DoxyCodeLine{01164\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_(:\ *|C\ |\ O\ |\ N\ |\ G\ |\ R\ |\ A\ |\ T\ |\ U\ |\ L\ |\ A|\ T\ |\ I\ |\ O\ |\ N\ |\ S|*\ :)\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{01165\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01166\ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{01167\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tCongratulations\ on\ winning\ the\ Meomory\ maze!\(\backslash\)n"{}});}
+\DoxyCodeLine{01168\ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{01169\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tYour\ quick\ recall\ and\ sharp\ memory\ have\ earned\ you\ a\ spot\ in\ the\ next\ challenge.\ \(\backslash\)n"{}});}
+\DoxyCodeLine{01170\ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{01171\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)n"{}});}
+\DoxyCodeLine{01172\ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{01173\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tKeep\ up\ the\ good\ work\ and\ best\ of\ luck\ as\ you\ continue\ on\ your\ adventurous\ journey.\(\backslash\)n"{}});}
+\DoxyCodeLine{01174\ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{01175\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\ \(\backslash\)n\ "{}});}
+\DoxyCodeLine{01176\ }
+\DoxyCodeLine{01177\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tAre\ you\ ready\ to\ face\ the\ new\ round\ ??\ \(\backslash\)n\ \(\backslash\)n"{}});}
+\DoxyCodeLine{01178\ \ \ \ \ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{01179\ }
+\DoxyCodeLine{01180\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tpress\ any\ key\ for\ next\ round\(\backslash\)n"{}});}
+\DoxyCodeLine{01181\ \ \ \ \ \ \ \ \ getch();}
+\DoxyCodeLine{01182\ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{01183\ \ \ \ \ \ \ \ \ \textcolor{keyword}{final}();}
+\DoxyCodeLine{01184\ \ \ \ \ \}}
+\DoxyCodeLine{01185\ }
+\DoxyCodeLine{01186\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{01187\ \ \ \ \ \{}
+\DoxyCodeLine{01188\ \ \ \ \ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{01189\ \ \ \ \ \ \ \ \ Sleep(700);}
+\DoxyCodeLine{01190\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01191\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01192\ }
+\DoxyCodeLine{01193\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_(::::*SAD!!:::::)\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{01194\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{01195\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tUnfortunately,\ you\ were\ not\ able\ to\ recall\ enough\ words\ in\ the\ Memory\ Maze\ round\ .\(\backslash\)n"{}});}
+\DoxyCodeLine{01196\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tBut\ don't\ be\ discouraged,\ every\ failure\ is\ a\ stepping\ stone\ to\ success\(\backslash\)n"{}});}
+\DoxyCodeLine{01197\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tTake\ this\ as\ an\ opportunity\ to\ improve\ your\ memory\ skills\ and\ come\ back\ stronger\ next\ time.\ \(\backslash\)n"{}});}
+\DoxyCodeLine{01198\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tWe\ hope\ you\ had\ a\ great\ experience\ and\ enjoyed\ the\ challenge.\ \(\backslash\)n"{}});}
+\DoxyCodeLine{01199\ }
+\DoxyCodeLine{01200\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tBetter\ luck\ next\ time!\(\backslash\)n"{}});}
+\DoxyCodeLine{01201\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)n"{}});}
+\DoxyCodeLine{01202\ \ \ \ \ \ \ \ \ Sleep(5000);}
+\DoxyCodeLine{01203\ \ \ \ \ \ \ \ \ main();}
+\DoxyCodeLine{01204\ \ \ \ \ \}}
+\DoxyCodeLine{01205\ \ \ \ \ Sleep(6000);}
+\DoxyCodeLine{01206\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{01207\ \ \ \ \ main();}
+\DoxyCodeLine{01208\ \}}
+\DoxyCodeLine{01209\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_a8ceb7cbdec161165184f87fcfa8dca45}{r3}}()}
+\DoxyCodeLine{01210\ \{}
+\DoxyCodeLine{01211\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01212\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01213\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01214\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01215\ }
+\DoxyCodeLine{01216\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \#\#\ \ \ \ \ \ \ \ \ \ \#\#\ \ \ \#\#\#\#\#\ \ \ \#\#\ \ \ \ \ \ \ \ \ \#\#\ \ \ \#\#\#\#\#\#\ \ \ \#\#\ \#\#\ \#\#\ \ \ \ \ \#\#\ \ \ \ \ \#\#\ \ \ \ \ \ \ \ \#\#\ \ \ \ \ \ \ \ \ \#\#\ \ \ \#\#\ \#\#\ \#\#\ \ \ \#\#\ \#\#\ \#\#\ \ \ \ \#\#\#\#\#\#\ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{01217\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \#\#\ \#\#\ \ \ \ \#\#\ \#\#\ \ \ \#\#\ \ \ \ \ \ \#\#\ \#\#\ \ \ \#\#\ \#\#\ \ \ \#\#\ \ \#\#\ \ \ \#\#\ \ \ \ \#\#\ \ \ \ \ \ \ \#\#\ \ \#\#\ \ \ \ \ \ \ \ \ \#\#\ \#\#\ \ \ \#\#\ \#\#\ \ \ \#\#\ \ \ \ \#\#\ \ \ \ \ \ \ \ \#\#\ \ \ \ \ \#\#\ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{01218\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \#\#\ \ \ \ \#\#\ \ \ \ \#\#\ \ \ \#\#\#\#\#\ \ \ \#\#\ \ \ \#\#\ \ \ \ \#\#\ \ \ \#\#\ \ \#\#\ \ \ \#\#\ \#\#\ \#\#\ \ \ \ \ \ \ \ \ \#\#\ \ \ \_\_\_\_\_\ \ \ \#\#\ \ \ \ \#\#\ \ \ \#\#\ \ \ \#\#\ \#\#\ \#\#\ \ \ \ \ \ \ \#\#\ \ \ \ \ \ \#\#\#\#\#\#\ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{01219\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \#\#\ \ \ \ \ \ \ \ \ \ \#\#\ \ \ \#\#\ \ \ \ \ \ \#\#\ \ \ \ \ \ \ \ \ \#\#\ \ \ \#\#\ \ \#\#\ \ \ \#\#\ \ \ \ \ \#\#\ \ \ \ \ \ \ \#\#\ \ \ \ \ \ \ \ \ \ \ \ \#\#\ \ \ \ \ \ \ \ \ \#\#\ \ \ \#\#\ \ \ \ \#\#\ \ \ \ \ \ \#\#\ \ \ \ \ \ \ \#\#\ \ \ \ \ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{01220\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \#\#\ \ \ \ \ \ \ \ \ \ \#\#\ \ \ \#\#\#\#\#\ \ \ \#\#\ \ \ \ \ \ \ \ \ \#\#\ \ \ \#\#\#\#\#\#\ \ \ \#\#\ \ \ \ \ \ \ \#\#\ \ \ \ \#\#\ \ \ \ \ \ \ \ \ \ \ \ \ \#\#\ \ \ \ \ \ \ \ \ \#\#\ \ \ \#\#\ \ \ \ \#\#\ \ \ \ \#\#\ \#\#\ \#\#\ \ \ \#\#\#\#\#\#\ \ \ \ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{01221\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{01222\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01223\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01224\ \}}
+\DoxyCodeLine{01225\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_adv_world_8h_aa8cb971f907b1d81196ded30eb9c758c}{r3abt}}()}
+\DoxyCodeLine{01226\ \{}
+\DoxyCodeLine{01227\ \ \ \ \ Sleep(800);}
+\DoxyCodeLine{01228\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tWelcome\ \ \%s\ to\ the\ Round\ of\ Memory\ Maze!\ In\ this\ round,\ \(\backslash\)n"{}},\ \mbox{\hyperlink{_adv_world_8h_ac71a110c00e8fab4884bca7f193fc7b4}{p}});}
+\DoxyCodeLine{01229\ \ \ \ \ Sleep(800);}
+\DoxyCodeLine{01230\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tyou\ will\ be\ presented\ with\ a\ series\ of\ words\ in\ sequence.\ \ \(\backslash\)n"{}});}
+\DoxyCodeLine{01231\ \ \ \ \ Sleep(800);}
+\DoxyCodeLine{01232\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tYour\ task\ is\ to\ try\ to\ remember\ as\ many\ of\ the\ words\ as\ possible.\(\backslash\)n"{}});}
+\DoxyCodeLine{01233\ \ \ \ \ Sleep(800);}
+\DoxyCodeLine{01234\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01235\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01236\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01237\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{01238\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Rules:-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ \(\backslash\)n\ \(\backslash\)n"{}});}
+\DoxyCodeLine{01239\ \ \ \ \ Sleep(600);}
+\DoxyCodeLine{01240\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t-\/>After\ all\ the\ words\ have\ been\ presented,\ they\ will\ be\ removed\ from\ view\ and\ \(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{01241\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{01242\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t-\/>You\ will\ then\ have\ 60\ seconds\ to\ enter\ as\ many\ of\ the\ words\ as\ you\ can\ recall.\(\backslash\)n\ \(\backslash\)n"{}});}
+\DoxyCodeLine{01243\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{01244\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t-\/>The\ more\ words\ you\ remember,\ the\ higher\ your\ score\ will\ be.\ \(\backslash\)n\ \(\backslash\)n"{}});}
+\DoxyCodeLine{01245\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{01246\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t-\/>If\ you\ are\ able\ to\ guess\ at\ least\ 10\ words\ correctly,\(\backslash\)n\ \(\backslash\)n"{}});}
+\DoxyCodeLine{01247\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{01248\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)t\ you\ will\ advance\ to\ the\ next\ round\ in\ your\ journey\ through\ Adventurous\ \(\backslash\)n\ \(\backslash\)n"{}});}
+\DoxyCodeLine{01249\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{01250\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{01251\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tGood\ luck\ and\ have\ fun\ in\ the\ Memory\ Maze!\(\backslash\)n\ \(\backslash\)n"{}});}
+\DoxyCodeLine{01252\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t\(\backslash\)tSimply\ press\ any\ key\ to\ start\ the\ Meomory\ maze"{}});}
+\DoxyCodeLine{01253\ }
+\DoxyCodeLine{01254\ \ \ \ \ getch();}
+\DoxyCodeLine{01255\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{01256\ }
+\DoxyCodeLine{01257\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{01258\ \}}
+
+\end{DoxyCode}

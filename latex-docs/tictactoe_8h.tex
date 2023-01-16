@@ -1,0 +1,355 @@
+\hypertarget{tictactoe_8h}{}\doxysection{tictactoe.\+h File Reference}
+\label{tictactoe_8h}\index{tictactoe.h@{tictactoe.h}}
+
+
+This file is related with coded of tictactoe game.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$conio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tictactoe_8h_a6728eac8015f483c7b84219300ae3ccf}{reset\+Board}} ()
+\begin{DoxyCompactList}\small\item\em for resetting the board for new game \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tictactoe_8h_a8310d6d1e915cb179f834d9ca017950a}{print\+Board}} ()
+\begin{DoxyCompactList}\small\item\em for printing the board every time the users input their move in multi player \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tictactoe_8h_aa8acf221c2e2ab0980023654978f898b}{check\+Free\+Spaces}} ()
+\begin{DoxyCompactList}\small\item\em checking spaces if no space left and no one wins \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tictactoe_8h_aae886a8e1a36a1478d9dfdd6cd374179}{player1\+Move}} ()
+\begin{DoxyCompactList}\small\item\em player one move in multi\+Player \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tictactoe_8h_a6e6cc150cf2a91247664d776de93f750}{player2\+Move}} ()
+\begin{DoxyCompactList}\small\item\em player 2 move in multi player \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tictactoe_8h_ac44c7df4145b62dd14c21cae3fdfaa89}{player\+Move}} ()
+\begin{DoxyCompactList}\small\item\em single player move against computer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tictactoe_8h_ac545ab3aee248b89f1e2a3d283b3fcba}{computer\+Move}} ()
+\begin{DoxyCompactList}\small\item\em Random move by the computer. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{tictactoe_8h_a4f96c8b0291c2e581551f521058cf0d7}{check\+Winner}} ()
+\begin{DoxyCompactList}\small\item\em checking if anyone won the game \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tictactoe_8h_a4175a6712b067758a01eea411037fcec}{print\+Winner}} (char \mbox{\hyperlink{finalround_8h_adaa7245c60bb580f05116ba14d4078c1}{winner}})
+\begin{DoxyCompactList}\small\item\em printing the winner \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tictactoe_8h_ab47b0367fa74347c468a44f57c369d5e}{single\+Player}} ()
+\begin{DoxyCompactList}\small\item\em single user human and computer-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tictactoe_8h_a217a974619a9443c3ce255aaa7a6fabb}{multi\+Player}} ()
+\begin{DoxyCompactList}\small\item\em playing 2 peron with math problems-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tictactoe_8h_afeb55b8dd264fe88d54c2bc66fff5e4f}{winner\+From2}} (char human\+Winner)
+\begin{DoxyCompactList}\small\item\em winner from multi player \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tictactoe_8h_aa4ba28084d1c074964edb9eba5b77041}{problem}} ()
+\begin{DoxyCompactList}\small\item\em function creating random math problem \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tictactoe_8h_a6d58098c6cf63c241ed03bc797256bb1}{play}} ()
+\begin{DoxyCompactList}\small\item\em play function-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tictactoe_8h_af999bcdaeeba3fd91ebd2fd9a4891de4}{level}} ()
+\item 
+void \mbox{\hyperlink{tictactoe_8h_acfef9d843f0b831a51b39069e6a78a7b}{category}} ()
+\begin{DoxyCompactList}\small\item\em to choose the category of the game-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tictactoe_8h_adb10d3e0a892d896928d80991be1cda5}{ticabout}} ()
+\begin{DoxyCompactList}\small\item\em about functon-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tictactoe_8h_a749f864a5889cc48839f74fca2eec3e9}{tic\+Title}} ()
+\item 
+int \mbox{\hyperlink{tictactoe_8h_a5a02a1fe5853105f13f268e2c33cab8d}{Tictactoe}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{tictactoe_8h_addb95bba86049086440d7527b58a5f2a}{board}} \mbox{[}3\mbox{]}\mbox{[}3\mbox{]}
+\item 
+const char \mbox{\hyperlink{tictactoe_8h_ad96b5e2fcae2aca00fcfb6205ea6cbc0}{PLAYER}} = \textquotesingle{}X\textquotesingle{}
+\item 
+const char \mbox{\hyperlink{tictactoe_8h_a66771f8fcda4dbac7f8b3f3eae7ce8b8}{COMPUTER}} = \textquotesingle{}O\textquotesingle{}
+\item 
+char \mbox{\hyperlink{tictactoe_8h_aaebb873b238f3e7a1380683ffd274788}{PLAYER1}}
+\item 
+char \mbox{\hyperlink{tictactoe_8h_a33242ba2faf740980a714d3e6cf54672}{PLAYER2}}
+\item 
+char \mbox{\hyperlink{tictactoe_8h_abeed1c7f8960ddeeaaed079c54d2d30d}{player1\+Name}} \mbox{[}25\mbox{]}
+\item 
+char \mbox{\hyperlink{tictactoe_8h_aee86041adf3fd8cdf6afe3a32e64a168}{player2\+Name}} \mbox{[}25\mbox{]}
+\item 
+int \mbox{\hyperlink{tictactoe_8h_a77104d22090bd43902a0e0bf8225fa4d}{choose\+Level}}
+\item 
+int \mbox{\hyperlink{tictactoe_8h_a96b62a33cfe12663c23c602b13557b96}{choose\+Category}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file is related with coded of tictactoe game. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{tictactoe_8h_a5a02a1fe5853105f13f268e2c33cab8d}{Tictactoe()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{tictactoe_8h_acfef9d843f0b831a51b39069e6a78a7b}\label{tictactoe_8h_acfef9d843f0b831a51b39069e6a78a7b}} 
+\index{tictactoe.h@{tictactoe.h}!category@{category}}
+\index{category@{category}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{category()}{category()}}
+{\footnotesize\ttfamily void category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+to choose the category of the game-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 
+
+\mbox{\Hypertarget{tictactoe_8h_aa8acf221c2e2ab0980023654978f898b}\label{tictactoe_8h_aa8acf221c2e2ab0980023654978f898b}} 
+\index{tictactoe.h@{tictactoe.h}!checkFreeSpaces@{checkFreeSpaces}}
+\index{checkFreeSpaces@{checkFreeSpaces}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{checkFreeSpaces()}{checkFreeSpaces()}}
+{\footnotesize\ttfamily int check\+Free\+Spaces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+checking spaces if no space left and no one wins 
+
+\mbox{\Hypertarget{tictactoe_8h_a4f96c8b0291c2e581551f521058cf0d7}\label{tictactoe_8h_a4f96c8b0291c2e581551f521058cf0d7}} 
+\index{tictactoe.h@{tictactoe.h}!checkWinner@{checkWinner}}
+\index{checkWinner@{checkWinner}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{checkWinner()}{checkWinner()}}
+{\footnotesize\ttfamily char check\+Winner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+checking if anyone won the game 
+
+check rows
+
+check columns
+
+check diagnols\mbox{\Hypertarget{tictactoe_8h_ac545ab3aee248b89f1e2a3d283b3fcba}\label{tictactoe_8h_ac545ab3aee248b89f1e2a3d283b3fcba}} 
+\index{tictactoe.h@{tictactoe.h}!computerMove@{computerMove}}
+\index{computerMove@{computerMove}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{computerMove()}{computerMove()}}
+{\footnotesize\ttfamily void computer\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Random move by the computer. 
+
+creates a seed based on current time\mbox{\Hypertarget{tictactoe_8h_af999bcdaeeba3fd91ebd2fd9a4891de4}\label{tictactoe_8h_af999bcdaeeba3fd91ebd2fd9a4891de4}} 
+\index{tictactoe.h@{tictactoe.h}!level@{level}}
+\index{level@{level}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{level()}{level()}}
+{\footnotesize\ttfamily void level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tictactoe_8h_a217a974619a9443c3ce255aaa7a6fabb}\label{tictactoe_8h_a217a974619a9443c3ce255aaa7a6fabb}} 
+\index{tictactoe.h@{tictactoe.h}!multiPlayer@{multiPlayer}}
+\index{multiPlayer@{multiPlayer}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{multiPlayer()}{multiPlayer()}}
+{\footnotesize\ttfamily void multi\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+playing 2 peron with math problems-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 
+
+Ask if player wants to give names-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---
+
+if no one is the winner and space is left then player one making move-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---
+
+if player 1 plays first-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---
+
+if the name is given by the players
+
+if player 2 wants to play first
+
+if the name is given by the players\mbox{\Hypertarget{tictactoe_8h_a6d58098c6cf63c241ed03bc797256bb1}\label{tictactoe_8h_a6d58098c6cf63c241ed03bc797256bb1}} 
+\index{tictactoe.h@{tictactoe.h}!play@{play}}
+\index{play@{play}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+play function-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 
+
+\mbox{\Hypertarget{tictactoe_8h_aae886a8e1a36a1478d9dfdd6cd374179}\label{tictactoe_8h_aae886a8e1a36a1478d9dfdd6cd374179}} 
+\index{tictactoe.h@{tictactoe.h}!player1Move@{player1Move}}
+\index{player1Move@{player1Move}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{player1Move()}{player1Move()}}
+{\footnotesize\ttfamily void player1\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+player one move in multi\+Player 
+
+\mbox{\Hypertarget{tictactoe_8h_a6e6cc150cf2a91247664d776de93f750}\label{tictactoe_8h_a6e6cc150cf2a91247664d776de93f750}} 
+\index{tictactoe.h@{tictactoe.h}!player2Move@{player2Move}}
+\index{player2Move@{player2Move}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{player2Move()}{player2Move()}}
+{\footnotesize\ttfamily void player2\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+player 2 move in multi player 
+
+\mbox{\Hypertarget{tictactoe_8h_ac44c7df4145b62dd14c21cae3fdfaa89}\label{tictactoe_8h_ac44c7df4145b62dd14c21cae3fdfaa89}} 
+\index{tictactoe.h@{tictactoe.h}!playerMove@{playerMove}}
+\index{playerMove@{playerMove}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{playerMove()}{playerMove()}}
+{\footnotesize\ttfamily void player\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+single player move against computer 
+
+\mbox{\Hypertarget{tictactoe_8h_a8310d6d1e915cb179f834d9ca017950a}\label{tictactoe_8h_a8310d6d1e915cb179f834d9ca017950a}} 
+\index{tictactoe.h@{tictactoe.h}!printBoard@{printBoard}}
+\index{printBoard@{printBoard}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{printBoard()}{printBoard()}}
+{\footnotesize\ttfamily void print\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+for printing the board every time the users input their move in multi player 
+
+extra large board\mbox{\Hypertarget{tictactoe_8h_a4175a6712b067758a01eea411037fcec}\label{tictactoe_8h_a4175a6712b067758a01eea411037fcec}} 
+\index{tictactoe.h@{tictactoe.h}!printWinner@{printWinner}}
+\index{printWinner@{printWinner}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{printWinner()}{printWinner()}}
+{\footnotesize\ttfamily void print\+Winner (\begin{DoxyParamCaption}\item[{char}]{winner }\end{DoxyParamCaption})}
+
+
+
+printing the winner 
+
+\mbox{\Hypertarget{tictactoe_8h_aa4ba28084d1c074964edb9eba5b77041}\label{tictactoe_8h_aa4ba28084d1c074964edb9eba5b77041}} 
+\index{tictactoe.h@{tictactoe.h}!problem@{problem}}
+\index{problem@{problem}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{problem()}{problem()}}
+{\footnotesize\ttfamily int problem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function creating random math problem 
+
+Generate two random numbers between 1 and 10
+
+medium level
+
+hard level
+
+easy level
+
+Print the math problem
+
+Read the user\textquotesingle{}s answer
+
+Check if the answer is correct for subtraction
+
+Check if the answer is correct for multiplication
+
+Check if the answer is correct for division \begin{DoxyNote}{Note}
+only integer value is considered as answer
+\end{DoxyNote}
+Check if the answer is correct for addition\mbox{\Hypertarget{tictactoe_8h_a6728eac8015f483c7b84219300ae3ccf}\label{tictactoe_8h_a6728eac8015f483c7b84219300ae3ccf}} 
+\index{tictactoe.h@{tictactoe.h}!resetBoard@{resetBoard}}
+\index{resetBoard@{resetBoard}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{resetBoard()}{resetBoard()}}
+{\footnotesize\ttfamily void reset\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+for resetting the board for new game 
+
+\mbox{\Hypertarget{tictactoe_8h_ab47b0367fa74347c468a44f57c369d5e}\label{tictactoe_8h_ab47b0367fa74347c468a44f57c369d5e}} 
+\index{tictactoe.h@{tictactoe.h}!singlePlayer@{singlePlayer}}
+\index{singlePlayer@{singlePlayer}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{singlePlayer()}{singlePlayer()}}
+{\footnotesize\ttfamily void single\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+single user human and computer-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 
+
+\mbox{\Hypertarget{tictactoe_8h_adb10d3e0a892d896928d80991be1cda5}\label{tictactoe_8h_adb10d3e0a892d896928d80991be1cda5}} 
+\index{tictactoe.h@{tictactoe.h}!ticabout@{ticabout}}
+\index{ticabout@{ticabout}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{ticabout()}{ticabout()}}
+{\footnotesize\ttfamily void ticabout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+about functon-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 
+
+\mbox{\Hypertarget{tictactoe_8h_a5a02a1fe5853105f13f268e2c33cab8d}\label{tictactoe_8h_a5a02a1fe5853105f13f268e2c33cab8d}} 
+\index{tictactoe.h@{tictactoe.h}!Tictactoe@{Tictactoe}}
+\index{Tictactoe@{Tictactoe}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{Tictactoe()}{Tictactoe()}}
+{\footnotesize\ttfamily int Tictactoe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tictactoe_8h_a749f864a5889cc48839f74fca2eec3e9}\label{tictactoe_8h_a749f864a5889cc48839f74fca2eec3e9}} 
+\index{tictactoe.h@{tictactoe.h}!ticTitle@{ticTitle}}
+\index{ticTitle@{ticTitle}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{ticTitle()}{ticTitle()}}
+{\footnotesize\ttfamily void tic\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tictactoe_8h_afeb55b8dd264fe88d54c2bc66fff5e4f}\label{tictactoe_8h_afeb55b8dd264fe88d54c2bc66fff5e4f}} 
+\index{tictactoe.h@{tictactoe.h}!winnerFrom2@{winnerFrom2}}
+\index{winnerFrom2@{winnerFrom2}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{winnerFrom2()}{winnerFrom2()}}
+{\footnotesize\ttfamily void winner\+From2 (\begin{DoxyParamCaption}\item[{char}]{human\+Winner }\end{DoxyParamCaption})}
+
+
+
+winner from multi player 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{tictactoe_8h_addb95bba86049086440d7527b58a5f2a}\label{tictactoe_8h_addb95bba86049086440d7527b58a5f2a}} 
+\index{tictactoe.h@{tictactoe.h}!board@{board}}
+\index{board@{board}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{board}{board}}
+{\footnotesize\ttfamily char board\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}}
+
+\mbox{\Hypertarget{tictactoe_8h_a96b62a33cfe12663c23c602b13557b96}\label{tictactoe_8h_a96b62a33cfe12663c23c602b13557b96}} 
+\index{tictactoe.h@{tictactoe.h}!chooseCategory@{chooseCategory}}
+\index{chooseCategory@{chooseCategory}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{chooseCategory}{chooseCategory}}
+{\footnotesize\ttfamily int choose\+Category}
+
+\mbox{\Hypertarget{tictactoe_8h_a77104d22090bd43902a0e0bf8225fa4d}\label{tictactoe_8h_a77104d22090bd43902a0e0bf8225fa4d}} 
+\index{tictactoe.h@{tictactoe.h}!chooseLevel@{chooseLevel}}
+\index{chooseLevel@{chooseLevel}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{chooseLevel}{chooseLevel}}
+{\footnotesize\ttfamily int choose\+Level}
+
+\mbox{\Hypertarget{tictactoe_8h_a66771f8fcda4dbac7f8b3f3eae7ce8b8}\label{tictactoe_8h_a66771f8fcda4dbac7f8b3f3eae7ce8b8}} 
+\index{tictactoe.h@{tictactoe.h}!COMPUTER@{COMPUTER}}
+\index{COMPUTER@{COMPUTER}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{COMPUTER}{COMPUTER}}
+{\footnotesize\ttfamily const char COMPUTER = \textquotesingle{}O\textquotesingle{}}
+
+\mbox{\Hypertarget{tictactoe_8h_ad96b5e2fcae2aca00fcfb6205ea6cbc0}\label{tictactoe_8h_ad96b5e2fcae2aca00fcfb6205ea6cbc0}} 
+\index{tictactoe.h@{tictactoe.h}!PLAYER@{PLAYER}}
+\index{PLAYER@{PLAYER}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{PLAYER}{PLAYER}}
+{\footnotesize\ttfamily const char PLAYER = \textquotesingle{}X\textquotesingle{}}
+
+\mbox{\Hypertarget{tictactoe_8h_aaebb873b238f3e7a1380683ffd274788}\label{tictactoe_8h_aaebb873b238f3e7a1380683ffd274788}} 
+\index{tictactoe.h@{tictactoe.h}!PLAYER1@{PLAYER1}}
+\index{PLAYER1@{PLAYER1}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{PLAYER1}{PLAYER1}}
+{\footnotesize\ttfamily char PLAYER1}
+
+\mbox{\Hypertarget{tictactoe_8h_abeed1c7f8960ddeeaaed079c54d2d30d}\label{tictactoe_8h_abeed1c7f8960ddeeaaed079c54d2d30d}} 
+\index{tictactoe.h@{tictactoe.h}!player1Name@{player1Name}}
+\index{player1Name@{player1Name}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{player1Name}{player1Name}}
+{\footnotesize\ttfamily char player1\+Name\mbox{[}25\mbox{]}}
+
+\mbox{\Hypertarget{tictactoe_8h_a33242ba2faf740980a714d3e6cf54672}\label{tictactoe_8h_a33242ba2faf740980a714d3e6cf54672}} 
+\index{tictactoe.h@{tictactoe.h}!PLAYER2@{PLAYER2}}
+\index{PLAYER2@{PLAYER2}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{PLAYER2}{PLAYER2}}
+{\footnotesize\ttfamily char PLAYER2}
+
+\mbox{\Hypertarget{tictactoe_8h_aee86041adf3fd8cdf6afe3a32e64a168}\label{tictactoe_8h_aee86041adf3fd8cdf6afe3a32e64a168}} 
+\index{tictactoe.h@{tictactoe.h}!player2Name@{player2Name}}
+\index{player2Name@{player2Name}!tictactoe.h@{tictactoe.h}}
+\doxysubsubsection{\texorpdfstring{player2Name}{player2Name}}
+{\footnotesize\ttfamily char player2\+Name\mbox{[}25\mbox{]}}
+

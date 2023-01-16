@@ -1,0 +1,561 @@
+\hypertarget{_adv_world_8h}{}\doxysection{Adv\+World.\+h File Reference}
+\label{_adv_world_8h}\index{AdvWorld.h@{AdvWorld.h}}
+
+
+This file contains code for the adventurous world.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$conio.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$process.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}finalround.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcoordinate}{coordinate}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_adv_world_8h_a1965eaca47dbf3f87acdafc2208f04eb}{UP}}~72
+\item 
+\#define \mbox{\hyperlink{_adv_world_8h_a4193cd1c8c2e6ebd0e056fa2364a663f}{DOWN}}~80
+\item 
+\#define \mbox{\hyperlink{_adv_world_8h_a437ef08681e7210d6678427030446a54}{LEFT}}~75
+\item 
+\#define \mbox{\hyperlink{_adv_world_8h_a80fb826a684cf3f0d306b22aa100ddac}{RIGHT}}~77
+\item 
+\#define \mbox{\hyperlink{_adv_world_8h_a2d0895da0d518a9553f025d8f472dca7}{NUM\+\_\+\+WORDS}}~18
+\begin{DoxyCompactList}\small\item\em for the memory maze \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_adv_world_8h_a4c8b6e3f5b517ddc1b9f9670ea0ead8f}{WORD\+\_\+\+LENGTH}}~20
+\item 
+\#define \mbox{\hyperlink{_adv_world_8h_acb7e51d1df3047c08c50ae6682a6cd70}{TIME\+\_\+\+LIMIT}}~60
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structcoordinate}{coordinate}} \mbox{\hyperlink{_adv_world_8h_ac0e5b7b5b4d698de3f31f6644ca0a94e}{coordinate}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a901b282dd93ce60ecdaffa60344416b2}{wordgame}} ()
+\begin{DoxyCompactList}\small\item\em Variables to store the star. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_adv_world_8h_ad2ae727c20e5f803e5f075b41aea2fb4}{record}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a78f61ac2dd03bcba8e09ca20cd7d68e3}{load}} ()
+\begin{DoxyCompactList}\small\item\em loading animation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_adv_world_8h_aad49cedd771da5ce9872fb364e8d6373}{Delay}} (long double)
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a678e66228c0453fbbe74a605bcc27c51}{Move}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a1951985f3541f595fc7800fbd6dc5535}{Food}} ()
+\item 
+int \mbox{\hyperlink{_adv_world_8h_afc01ad71e5a2a27ebbbe7b7983cbb02b}{Score}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_ad3e8ad05a5a7e29f0d3959fed8699cd1}{r2title}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_ae824443b3f661414ba1f2718e17fe97d}{gotoxy}} (int x, int y)
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}{Goto\+XY}} (int x, int y)
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a7ea3861fdbe2c138a4768c1bc57edc06}{Bend}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a1038bb98ca722fbe2f7a458d629f6a4d}{Boarder}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a8ecb72ff0fd235afbf997e25815a13d5}{Down}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_ac268cc4e608aa0068c30f2e4a652b084}{Left}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a9226c9486c93021ea9290bdac5903ae4}{About}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_aa1e4dcf406c3281b132a396a60965e0f}{Up}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a1b0e394cd24dadbcff32387d3036da5f}{Right}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a4ae4a6c601765f289ae97678bb8a4d6a}{Exit\+Game}} ()
+\item 
+int \mbox{\hyperlink{_adv_world_8h_a40a74cbfd7d2271a5a5caeb629197dd1}{Scoreonly}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a41320bcd176268538f9089d219cceb88}{awtitle}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_aae3e2690cdff1de894c6a726f407b586}{r1}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a07aaf1227e4d645f15e0a964f54ef291}{Start}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a0aa4f19a1fed4396e1f1af1dfa74707e}{r1title}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a03aef505ffcb6ae91fd2a4b372dcf290}{r2abt}} ()
+\begin{DoxyCompactList}\small\item\em Goto\+XY(10,12);. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_adv_world_8h_a44f6f9087a670d73941b5b79feb7f3ca}{win}} (char comp, char p1)
+\begin{DoxyCompactList}\small\item\em for rock paper scissors comparision \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_adv_world_8h_a8115ddeff807f03a1350a667d1ffd962}{aworld}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a8df1a5289cd00acce243dc39cca94cc9}{Guess}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_a8ceb7cbdec161165184f87fcfa8dca45}{r3}} ()
+\item 
+void \mbox{\hyperlink{_adv_world_8h_aa8cb971f907b1d81196ded30eb9c758c}{r3abt}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}{length}}
+\item 
+int \mbox{\hyperlink{_adv_world_8h_a63f972d7e05d93c97d5764c956b84e9d}{bend\+\_\+no}}
+\item 
+int \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}
+\item 
+char \mbox{\hyperlink{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}{key}}
+\item 
+int \mbox{\hyperlink{_adv_world_8h_adf488ff0ce8098cd956c07890cbc5d50}{life}}
+\item 
+char \mbox{\hyperlink{_adv_world_8h_ac71a110c00e8fab4884bca7f193fc7b4}{p}} \mbox{[}20\mbox{]}
+\item 
+\mbox{\hyperlink{structcoordinate}{coordinate}} \mbox{\hyperlink{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}{head}}
+\item 
+\mbox{\hyperlink{structcoordinate}{coordinate}} \mbox{\hyperlink{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}{bend}} \mbox{[}500\mbox{]}
+\item 
+\mbox{\hyperlink{structcoordinate}{coordinate}} \mbox{\hyperlink{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}{food}}
+\item 
+\mbox{\hyperlink{structcoordinate}{coordinate}} \mbox{\hyperlink{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}{body}} \mbox{[}30\mbox{]}
+\item 
+int \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}
+\begin{DoxyCompactList}\small\item\em Array to track which words have been used. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}
+\item 
+char \mbox{\hyperlink{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}{words}} \mbox{[}\mbox{\hyperlink{_adv_world_8h_a2d0895da0d518a9553f025d8f472dca7}{NUM\+\_\+\+WORDS}}\mbox{]}\mbox{[}\mbox{\hyperlink{_adv_world_8h_a4c8b6e3f5b517ddc1b9f9670ea0ead8f}{WORD\+\_\+\+LENGTH}}\mbox{]}
+\item 
+bool \mbox{\hyperlink{_adv_world_8h_a87a72f0f663c9b9ca5bd22ccc94d74f0}{used}} \mbox{[}\mbox{\hyperlink{_adv_world_8h_a2d0895da0d518a9553f025d8f472dca7}{NUM\+\_\+\+WORDS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array to store the words. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_adv_world_8h_aef689a6cb86e920f508e6d5e57e01c3f}{num\+Correct}} = 0
+\item 
+char \mbox{\hyperlink{_adv_world_8h_a614441b95148070e68b155910d9ecc34}{guess}} \mbox{[}\mbox{\hyperlink{_adv_world_8h_a4c8b6e3f5b517ddc1b9f9670ea0ead8f}{WORD\+\_\+\+LENGTH}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Loop variables and score counter. \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{_adv_world_8h_aaf564fc30a2a8624cf917e282281a500}{start\+Time}}
+\begin{DoxyCompactList}\small\item\em Variable to store player\textquotesingle{}s guess. \end{DoxyCompactList}\item 
+time\+\_\+t \mbox{\hyperlink{_adv_world_8h_a1f1e169e482467aaf615639bb3467f09}{end\+Time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains code for the adventurous world. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_adv_world_8h_a4193cd1c8c2e6ebd0e056fa2364a663f}\label{_adv_world_8h_a4193cd1c8c2e6ebd0e056fa2364a663f}} 
+\index{AdvWorld.h@{AdvWorld.h}!DOWN@{DOWN}}
+\index{DOWN@{DOWN}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{DOWN}{DOWN}}
+{\footnotesize\ttfamily \#define DOWN~80}
+
+\mbox{\Hypertarget{_adv_world_8h_a437ef08681e7210d6678427030446a54}\label{_adv_world_8h_a437ef08681e7210d6678427030446a54}} 
+\index{AdvWorld.h@{AdvWorld.h}!LEFT@{LEFT}}
+\index{LEFT@{LEFT}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{LEFT}{LEFT}}
+{\footnotesize\ttfamily \#define LEFT~75}
+
+\mbox{\Hypertarget{_adv_world_8h_a2d0895da0d518a9553f025d8f472dca7}\label{_adv_world_8h_a2d0895da0d518a9553f025d8f472dca7}} 
+\index{AdvWorld.h@{AdvWorld.h}!NUM\_WORDS@{NUM\_WORDS}}
+\index{NUM\_WORDS@{NUM\_WORDS}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{NUM\_WORDS}{NUM\_WORDS}}
+{\footnotesize\ttfamily \#define NUM\+\_\+\+WORDS~18}
+
+
+
+for the memory maze 
+
+\mbox{\Hypertarget{_adv_world_8h_a80fb826a684cf3f0d306b22aa100ddac}\label{_adv_world_8h_a80fb826a684cf3f0d306b22aa100ddac}} 
+\index{AdvWorld.h@{AdvWorld.h}!RIGHT@{RIGHT}}
+\index{RIGHT@{RIGHT}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{RIGHT}{RIGHT}}
+{\footnotesize\ttfamily \#define RIGHT~77}
+
+\mbox{\Hypertarget{_adv_world_8h_acb7e51d1df3047c08c50ae6682a6cd70}\label{_adv_world_8h_acb7e51d1df3047c08c50ae6682a6cd70}} 
+\index{AdvWorld.h@{AdvWorld.h}!TIME\_LIMIT@{TIME\_LIMIT}}
+\index{TIME\_LIMIT@{TIME\_LIMIT}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{TIME\_LIMIT}{TIME\_LIMIT}}
+{\footnotesize\ttfamily \#define TIME\+\_\+\+LIMIT~60}
+
+\mbox{\Hypertarget{_adv_world_8h_a1965eaca47dbf3f87acdafc2208f04eb}\label{_adv_world_8h_a1965eaca47dbf3f87acdafc2208f04eb}} 
+\index{AdvWorld.h@{AdvWorld.h}!UP@{UP}}
+\index{UP@{UP}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{UP}{UP}}
+{\footnotesize\ttfamily \#define UP~72}
+
+\mbox{\Hypertarget{_adv_world_8h_a4c8b6e3f5b517ddc1b9f9670ea0ead8f}\label{_adv_world_8h_a4c8b6e3f5b517ddc1b9f9670ea0ead8f}} 
+\index{AdvWorld.h@{AdvWorld.h}!WORD\_LENGTH@{WORD\_LENGTH}}
+\index{WORD\_LENGTH@{WORD\_LENGTH}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{WORD\_LENGTH}{WORD\_LENGTH}}
+{\footnotesize\ttfamily \#define WORD\+\_\+\+LENGTH~20}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_adv_world_8h_ac0e5b7b5b4d698de3f31f6644ca0a94e}\label{_adv_world_8h_ac0e5b7b5b4d698de3f31f6644ca0a94e}} 
+\index{AdvWorld.h@{AdvWorld.h}!coordinate@{coordinate}}
+\index{coordinate@{coordinate}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{coordinate}{coordinate}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structcoordinate}{coordinate}} \mbox{\hyperlink{structcoordinate}{coordinate}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_adv_world_8h_a9226c9486c93021ea9290bdac5903ae4}\label{_adv_world_8h_a9226c9486c93021ea9290bdac5903ae4}} 
+\index{AdvWorld.h@{AdvWorld.h}!About@{About}}
+\index{About@{About}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{About()}{About()}}
+{\footnotesize\ttfamily void About (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_a8115ddeff807f03a1350a667d1ffd962}\label{_adv_world_8h_a8115ddeff807f03a1350a667d1ffd962}} 
+\index{AdvWorld.h@{AdvWorld.h}!aworld@{aworld}}
+\index{aworld@{aworld}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{aworld()}{aworld()}}
+{\footnotesize\ttfamily int aworld (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+comparing the score
+
+to generate food coordinates initially
+
+number of extra lives
+
+initialing initial bend coordinate\mbox{\Hypertarget{_adv_world_8h_a41320bcd176268538f9089d219cceb88}\label{_adv_world_8h_a41320bcd176268538f9089d219cceb88}} 
+\index{AdvWorld.h@{AdvWorld.h}!awtitle@{awtitle}}
+\index{awtitle@{awtitle}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{awtitle()}{awtitle()}}
+{\footnotesize\ttfamily void awtitle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_a7ea3861fdbe2c138a4768c1bc57edc06}\label{_adv_world_8h_a7ea3861fdbe2c138a4768c1bc57edc06}} 
+\index{AdvWorld.h@{AdvWorld.h}!Bend@{Bend}}
+\index{Bend@{Bend}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{Bend()}{Bend()}}
+{\footnotesize\ttfamily void Bend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Goto\+XY(bend\mbox{[}i\mbox{]}.x,(bend\mbox{[}i\mbox{]}.y-\/j)); printf(\char`\"{}$\ast$\char`\"{});
+
+Goto\+XY((bend\mbox{[}i\mbox{]}.x+j),bend\mbox{[}i\mbox{]}.y); printf(\char`\"{}$\ast$\char`\"{});
+
+((bend\mbox{[}i\mbox{]}.x-\/j),bend\mbox{[}i\mbox{]}.y); printf(\char`\"{}$\ast$\char`\"{});\mbox{\Hypertarget{_adv_world_8h_a1038bb98ca722fbe2f7a458d629f6a4d}\label{_adv_world_8h_a1038bb98ca722fbe2f7a458d629f6a4d}} 
+\index{AdvWorld.h@{AdvWorld.h}!Boarder@{Boarder}}
+\index{Boarder@{Boarder}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{Boarder()}{Boarder()}}
+{\footnotesize\ttfamily void Boarder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+displaying food\mbox{\Hypertarget{_adv_world_8h_aad49cedd771da5ce9872fb364e8d6373}\label{_adv_world_8h_aad49cedd771da5ce9872fb364e8d6373}} 
+\index{AdvWorld.h@{AdvWorld.h}!Delay@{Delay}}
+\index{Delay@{Delay}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{Delay()}{Delay()}}
+{\footnotesize\ttfamily void Delay (\begin{DoxyParamCaption}\item[{long double}]{k }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_a8ecb72ff0fd235afbf997e25815a13d5}\label{_adv_world_8h_a8ecb72ff0fd235afbf997e25815a13d5}} 
+\index{AdvWorld.h@{AdvWorld.h}!Down@{Down}}
+\index{Down@{Down}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{Down()}{Down()}}
+{\footnotesize\ttfamily void Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_a4ae4a6c601765f289ae97678bb8a4d6a}\label{_adv_world_8h_a4ae4a6c601765f289ae97678bb8a4d6a}} 
+\index{AdvWorld.h@{AdvWorld.h}!ExitGame@{ExitGame}}
+\index{ExitGame@{ExitGame}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{ExitGame()}{ExitGame()}}
+{\footnotesize\ttfamily void Exit\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+starts with 4 because it needs minimum 4 element to touch its own body
+
+check\textquotesingle{}s value increases as the coordinates of head is equal to any other body coordinate\mbox{\Hypertarget{_adv_world_8h_a1951985f3541f595fc7800fbd6dc5535}\label{_adv_world_8h_a1951985f3541f595fc7800fbd6dc5535}} 
+\index{AdvWorld.h@{AdvWorld.h}!Food@{Food}}
+\index{Food@{Food}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{Food()}{Food()}}
+{\footnotesize\ttfamily void Food (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+to create food for the first time coz global variable are initialized with 0\mbox{\Hypertarget{_adv_world_8h_ae824443b3f661414ba1f2718e17fe97d}\label{_adv_world_8h_ae824443b3f661414ba1f2718e17fe97d}} 
+\index{AdvWorld.h@{AdvWorld.h}!gotoxy@{gotoxy}}
+\index{gotoxy@{gotoxy}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{gotoxy()}{gotoxy()}}
+{\footnotesize\ttfamily void gotoxy (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}\label{_adv_world_8h_a08c7a02d581a5b018f840568a8289779}} 
+\index{AdvWorld.h@{AdvWorld.h}!GotoXY@{GotoXY}}
+\index{GotoXY@{GotoXY}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{GotoXY()}{GotoXY()}}
+{\footnotesize\ttfamily void Goto\+XY (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_a8df1a5289cd00acce243dc39cca94cc9}\label{_adv_world_8h_a8df1a5289cd00acce243dc39cca94cc9}} 
+\index{AdvWorld.h@{AdvWorld.h}!Guess@{Guess}}
+\index{Guess@{Guess}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{Guess()}{Guess()}}
+{\footnotesize\ttfamily void Guess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Record the start time
+
+Check if the guess is correct
+
+Update the end time\mbox{\Hypertarget{_adv_world_8h_ac268cc4e608aa0068c30f2e4a652b084}\label{_adv_world_8h_ac268cc4e608aa0068c30f2e4a652b084}} 
+\index{AdvWorld.h@{AdvWorld.h}!Left@{Left}}
+\index{Left@{Left}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{Left()}{Left()}}
+{\footnotesize\ttfamily void Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_a78f61ac2dd03bcba8e09ca20cd7d68e3}\label{_adv_world_8h_a78f61ac2dd03bcba8e09ca20cd7d68e3}} 
+\index{AdvWorld.h@{AdvWorld.h}!load@{load}}
+\index{load@{load}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+loading animation 
+
+\mbox{\Hypertarget{_adv_world_8h_a678e66228c0453fbbe74a605bcc27c51}\label{_adv_world_8h_a678e66228c0453fbbe74a605bcc27c51}} 
+\index{AdvWorld.h@{AdvWorld.h}!Move@{Move}}
+\index{Move@{Move}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_aae3e2690cdff1de894c6a726f407b586}\label{_adv_world_8h_aae3e2690cdff1de894c6a726f407b586}} 
+\index{AdvWorld.h@{AdvWorld.h}!r1@{r1}}
+\index{r1@{r1}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{r1()}{r1()}}
+{\footnotesize\ttfamily void r1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_a0aa4f19a1fed4396e1f1af1dfa74707e}\label{_adv_world_8h_a0aa4f19a1fed4396e1f1af1dfa74707e}} 
+\index{AdvWorld.h@{AdvWorld.h}!r1title@{r1title}}
+\index{r1title@{r1title}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{r1title()}{r1title()}}
+{\footnotesize\ttfamily void r1title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_a03aef505ffcb6ae91fd2a4b372dcf290}\label{_adv_world_8h_a03aef505ffcb6ae91fd2a4b372dcf290}} 
+\index{AdvWorld.h@{AdvWorld.h}!r2abt@{r2abt}}
+\index{r2abt@{r2abt}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{r2abt()}{r2abt()}}
+{\footnotesize\ttfamily void r2abt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Goto\+XY(10,12);. 
+
+\mbox{\Hypertarget{_adv_world_8h_ad3e8ad05a5a7e29f0d3959fed8699cd1}\label{_adv_world_8h_ad3e8ad05a5a7e29f0d3959fed8699cd1}} 
+\index{AdvWorld.h@{AdvWorld.h}!r2title@{r2title}}
+\index{r2title@{r2title}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{r2title()}{r2title()}}
+{\footnotesize\ttfamily void r2title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_a8ceb7cbdec161165184f87fcfa8dca45}\label{_adv_world_8h_a8ceb7cbdec161165184f87fcfa8dca45}} 
+\index{AdvWorld.h@{AdvWorld.h}!r3@{r3}}
+\index{r3@{r3}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{r3()}{r3()}}
+{\footnotesize\ttfamily void r3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_aa8cb971f907b1d81196ded30eb9c758c}\label{_adv_world_8h_aa8cb971f907b1d81196ded30eb9c758c}} 
+\index{AdvWorld.h@{AdvWorld.h}!r3abt@{r3abt}}
+\index{r3abt@{r3abt}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{r3abt()}{r3abt()}}
+{\footnotesize\ttfamily void r3abt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_ad2ae727c20e5f803e5f075b41aea2fb4}\label{_adv_world_8h_ad2ae727c20e5f803e5f075b41aea2fb4}} 
+\index{AdvWorld.h@{AdvWorld.h}!record@{record}}
+\index{record@{record}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{record()}{record()}}
+{\footnotesize\ttfamily void record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_a1b0e394cd24dadbcff32387d3036da5f}\label{_adv_world_8h_a1b0e394cd24dadbcff32387d3036da5f}} 
+\index{AdvWorld.h@{AdvWorld.h}!Right@{Right}}
+\index{Right@{Right}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{Right()}{Right()}}
+{\footnotesize\ttfamily void Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Goto\+XY((head.\+x-\/i),head.\+y);
+
+\mbox{[}len\mbox{]}.x=head.\+x-\/i; body\mbox{[}len\mbox{]}.y=head.\+y;\mbox{\Hypertarget{_adv_world_8h_afc01ad71e5a2a27ebbbe7b7983cbb02b}\label{_adv_world_8h_afc01ad71e5a2a27ebbbe7b7983cbb02b}} 
+\index{AdvWorld.h@{AdvWorld.h}!Score@{Score}}
+\index{Score@{Score}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{Score()}{Score()}}
+{\footnotesize\ttfamily int Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_a40a74cbfd7d2271a5a5caeb629197dd1}\label{_adv_world_8h_a40a74cbfd7d2271a5a5caeb629197dd1}} 
+\index{AdvWorld.h@{AdvWorld.h}!Scoreonly@{Scoreonly}}
+\index{Scoreonly@{Scoreonly}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{Scoreonly()}{Scoreonly()}}
+{\footnotesize\ttfamily int Scoreonly (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_a07aaf1227e4d645f15e0a964f54ef291}\label{_adv_world_8h_a07aaf1227e4d645f15e0a964f54ef291}} 
+\index{AdvWorld.h@{AdvWorld.h}!Start@{Start}}
+\index{Start@{Start}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_aa1e4dcf406c3281b132a396a60965e0f}\label{_adv_world_8h_aa1e4dcf406c3281b132a396a60965e0f}} 
+\index{AdvWorld.h@{AdvWorld.h}!Up@{Up}}
+\index{Up@{Up}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{Up()}{Up()}}
+{\footnotesize\ttfamily void Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_adv_world_8h_a44f6f9087a670d73941b5b79feb7f3ca}\label{_adv_world_8h_a44f6f9087a670d73941b5b79feb7f3ca}} 
+\index{AdvWorld.h@{AdvWorld.h}!win@{win}}
+\index{win@{win}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{win()}{win()}}
+{\footnotesize\ttfamily int win (\begin{DoxyParamCaption}\item[{char}]{comp,  }\item[{char}]{p1 }\end{DoxyParamCaption})}
+
+
+
+for rock paper scissors comparision 
+
+\mbox{\Hypertarget{_adv_world_8h_a901b282dd93ce60ecdaffa60344416b2}\label{_adv_world_8h_a901b282dd93ce60ecdaffa60344416b2}} 
+\index{AdvWorld.h@{AdvWorld.h}!wordgame@{wordgame}}
+\index{wordgame@{wordgame}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{wordgame()}{wordgame()}}
+{\footnotesize\ttfamily void wordgame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Variables to store the star. 
+
+Declare variables
+
+Initialize the arrays
+
+Populate the array of words
+
+Print game instructions
+
+Display the words to the player
+
+Wait for 1 second before clearing the screen
+
+Clear the screen
+
+Get player\textquotesingle{}s guesses
+
+Display the player\textquotesingle{}s score
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}\label{_adv_world_8h_acc5af854395ae3db6620f93a074d95a0}} 
+\index{AdvWorld.h@{AdvWorld.h}!bend@{bend}}
+\index{bend@{bend}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{bend}{bend}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcoordinate}{coordinate}} bend\mbox{[}500\mbox{]}}
+
+\mbox{\Hypertarget{_adv_world_8h_a63f972d7e05d93c97d5764c956b84e9d}\label{_adv_world_8h_a63f972d7e05d93c97d5764c956b84e9d}} 
+\index{AdvWorld.h@{AdvWorld.h}!bend\_no@{bend\_no}}
+\index{bend\_no@{bend\_no}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{bend\_no}{bend\_no}}
+{\footnotesize\ttfamily int bend\+\_\+no}
+
+\mbox{\Hypertarget{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}\label{_adv_world_8h_a54ce08adae86f9b0fe42b9c55b544a4c}} 
+\index{AdvWorld.h@{AdvWorld.h}!body@{body}}
+\index{body@{body}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{body}{body}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcoordinate}{coordinate}} body\mbox{[}30\mbox{]}}
+
+\mbox{\Hypertarget{_adv_world_8h_a1f1e169e482467aaf615639bb3467f09}\label{_adv_world_8h_a1f1e169e482467aaf615639bb3467f09}} 
+\index{AdvWorld.h@{AdvWorld.h}!endTime@{endTime}}
+\index{endTime@{endTime}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{endTime}{endTime}}
+{\footnotesize\ttfamily time\+\_\+t end\+Time}
+
+\mbox{\Hypertarget{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}\label{_adv_world_8h_ab14451ea6560009c56ff7baf9a447552}} 
+\index{AdvWorld.h@{AdvWorld.h}!food@{food}}
+\index{food@{food}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{food}{food}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcoordinate}{coordinate}} food}
+
+\mbox{\Hypertarget{_adv_world_8h_a614441b95148070e68b155910d9ecc34}\label{_adv_world_8h_a614441b95148070e68b155910d9ecc34}} 
+\index{AdvWorld.h@{AdvWorld.h}!guess@{guess}}
+\index{guess@{guess}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{guess}{guess}}
+{\footnotesize\ttfamily char guess\mbox{[}\mbox{\hyperlink{_adv_world_8h_a4c8b6e3f5b517ddc1b9f9670ea0ead8f}{WORD\+\_\+\+LENGTH}}\mbox{]}}
+
+
+
+Loop variables and score counter. 
+
+\mbox{\Hypertarget{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}\label{_adv_world_8h_aab9e0b5690a385c58d24c9b0f3ef87b7}} 
+\index{AdvWorld.h@{AdvWorld.h}!head@{head}}
+\index{head@{head}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcoordinate}{coordinate}} head}
+
+\mbox{\Hypertarget{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}\label{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}} 
+\index{AdvWorld.h@{AdvWorld.h}!i@{i}}
+\index{i@{i}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily int i}
+
+
+
+Array to track which words have been used. 
+
+\mbox{\Hypertarget{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}\label{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}} 
+\index{AdvWorld.h@{AdvWorld.h}!j@{j}}
+\index{j@{j}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{j}{j}}
+{\footnotesize\ttfamily int j}
+
+\mbox{\Hypertarget{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}\label{_adv_world_8h_acad36f7a1211e9e9da68e181667d9c3f}} 
+\index{AdvWorld.h@{AdvWorld.h}!key@{key}}
+\index{key@{key}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily char key}
+
+\mbox{\Hypertarget{_adv_world_8h_afed088663f8704004425cdae2120b9b3}\label{_adv_world_8h_afed088663f8704004425cdae2120b9b3}} 
+\index{AdvWorld.h@{AdvWorld.h}!len@{len}}
+\index{len@{len}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{len}{len}}
+{\footnotesize\ttfamily int len}
+
+\mbox{\Hypertarget{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}\label{_adv_world_8h_a9f59b34b1f25fe00023291b678246bcc}} 
+\index{AdvWorld.h@{AdvWorld.h}!length@{length}}
+\index{length@{length}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily int length}
+
+\mbox{\Hypertarget{_adv_world_8h_adf488ff0ce8098cd956c07890cbc5d50}\label{_adv_world_8h_adf488ff0ce8098cd956c07890cbc5d50}} 
+\index{AdvWorld.h@{AdvWorld.h}!life@{life}}
+\index{life@{life}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{life}{life}}
+{\footnotesize\ttfamily int life}
+
+\mbox{\Hypertarget{_adv_world_8h_aef689a6cb86e920f508e6d5e57e01c3f}\label{_adv_world_8h_aef689a6cb86e920f508e6d5e57e01c3f}} 
+\index{AdvWorld.h@{AdvWorld.h}!numCorrect@{numCorrect}}
+\index{numCorrect@{numCorrect}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{numCorrect}{numCorrect}}
+{\footnotesize\ttfamily int num\+Correct = 0}
+
+\mbox{\Hypertarget{_adv_world_8h_ac71a110c00e8fab4884bca7f193fc7b4}\label{_adv_world_8h_ac71a110c00e8fab4884bca7f193fc7b4}} 
+\index{AdvWorld.h@{AdvWorld.h}!p@{p}}
+\index{p@{p}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily char p\mbox{[}20\mbox{]}}
+
+\mbox{\Hypertarget{_adv_world_8h_aaf564fc30a2a8624cf917e282281a500}\label{_adv_world_8h_aaf564fc30a2a8624cf917e282281a500}} 
+\index{AdvWorld.h@{AdvWorld.h}!startTime@{startTime}}
+\index{startTime@{startTime}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily time\+\_\+t start\+Time}
+
+
+
+Variable to store player\textquotesingle{}s guess. 
+
+\mbox{\Hypertarget{_adv_world_8h_a87a72f0f663c9b9ca5bd22ccc94d74f0}\label{_adv_world_8h_a87a72f0f663c9b9ca5bd22ccc94d74f0}} 
+\index{AdvWorld.h@{AdvWorld.h}!used@{used}}
+\index{used@{used}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{used}{used}}
+{\footnotesize\ttfamily bool used\mbox{[}\mbox{\hyperlink{_adv_world_8h_a2d0895da0d518a9553f025d8f472dca7}{NUM\+\_\+\+WORDS}}\mbox{]}}
+
+
+
+Array to store the words. 
+
+\mbox{\Hypertarget{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}\label{_adv_world_8h_abd3ae49f67659a535caa7adbd97ba825}} 
+\index{AdvWorld.h@{AdvWorld.h}!words@{words}}
+\index{words@{words}!AdvWorld.h@{AdvWorld.h}}
+\doxysubsubsection{\texorpdfstring{words}{words}}
+{\footnotesize\ttfamily char words\mbox{[}\mbox{\hyperlink{_adv_world_8h_a2d0895da0d518a9553f025d8f472dca7}{NUM\+\_\+\+WORDS}}\mbox{]}\mbox{[}\mbox{\hyperlink{_adv_world_8h_a4c8b6e3f5b517ddc1b9f9670ea0ead8f}{WORD\+\_\+\+LENGTH}}\mbox{]}}
+

@@ -1,0 +1,168 @@
+\hypertarget{_multiplayer_8h_source}{}\doxysection{Multiplayer.\+h}
+\mbox{\hyperlink{_multiplayer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00004\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_multiplayer_8h_a78f61ac2dd03bcba8e09ca20cd7d68e3}{load}}()}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\ LOADING\ "{}});}
+\DoxyCodeLine{00007\ \ \ \ \ Sleep(1000);}
+\DoxyCodeLine{00008\ \ \ \ \ printf(\textcolor{stringliteral}{"{}.."{}});}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00011\ \ \ \ \ printf(\textcolor{stringliteral}{"{}.."{}});}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00014\ \ \ \ \ printf(\textcolor{stringliteral}{"{}.."{}});}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ Sleep(500);}
+\DoxyCodeLine{00017\ \ \ \ \ printf(\textcolor{stringliteral}{"{}..."{}});}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_multiplayer_8h_a9bba50a6a2fe0a646ba77232f4b0e50f}{takeword}}(\textcolor{keywordtype}{char}\ wd[50])}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{char}\ ch;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{while}\ (1)}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ ch\ =\ getch();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ch\ ==\ 13\ ||\ ch\ ==\ 9)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ wd[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (ch\ ==\ 8)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ >\ 0)}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}-\/-\/;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)b\ \(\backslash\)b"{}});}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ wd[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}++]\ =\ ch;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}*\ \(\backslash\)b"{}});}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_multiplayer_8h_a757214ec9b0dfa9c58f732c163900399}{multi}}()}
+\DoxyCodeLine{00057\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{char}\ word[20];}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{char}\ temp[20];}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{char}\ player\_guessed;}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}},\ n;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}},\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ lives,\ correct;}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_adv_world_8h_a614441b95148070e68b155910d9ecc34}{guess}}\ =\ 0;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{char}\ hint[25];}
+\DoxyCodeLine{00070\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{_multiplayer_8h_a78f61ac2dd03bcba8e09ca20cd7d68e3}{load}}();}
+\DoxyCodeLine{00072\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Hangman\ The\ Game..."{}});}
+\DoxyCodeLine{00073\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00074\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00075\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00076\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \(\backslash\)t=====================================================================================================================================\(\backslash\)n"{}});}
+\DoxyCodeLine{00077\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \(\backslash\)t|\ \ \ WORD\ GIVING\ TIME!!!!!!!\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00078\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \(\backslash\)t|\(\backslash\)n"{}});}
+\DoxyCodeLine{00079\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \(\backslash\)t|\ \ \ \ \ \ Enter\ any\ word\ you\ want\ your\ friend\ to\ guess\ :"{}});}
+\DoxyCodeLine{00080\ \ \ \ \ fflush(stdout);}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{_multiplayer_8h_a9bba50a6a2fe0a646ba77232f4b0e50f}{takeword}}(word);}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}}\ =\ strlen(word);}
+\DoxyCodeLine{00084\ \ \ \ \ strlwr(word);}
+\DoxyCodeLine{00085\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \(\backslash\)t|\(\backslash\)n"{}});}
+\DoxyCodeLine{00086\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \(\backslash\)n\(\backslash\)t|\ \ \ \ \ \ Hint\ :"{}});}
+\DoxyCodeLine{00087\ \ \ \ \ gets(hint);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{_multiplayer_8h_a78f61ac2dd03bcba8e09ca20cd7d68e3}{load}}();}
+\DoxyCodeLine{00091\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Hangman\ The\ Game..."{}});}
+\DoxyCodeLine{00092\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00093\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00094\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00095\ \ \ \ \ n\ =\ \mbox{\hyperlink{_adv_world_8h_afed088663f8704004425cdae2120b9b3}{len}};}
+\DoxyCodeLine{00096\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \ =====================================================================================================================================\(\backslash\)n"{}});}
+\DoxyCodeLine{00097\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00098\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\ \ \ \ AND\ HERE\ WE\ GO......!!!\(\backslash\)n"{}});}
+\DoxyCodeLine{00099\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00100\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\ \ \ \ CAN\ YOU\ SAVE\ ME\ PLESASE?:(\ \(\backslash\)n"{}});}
+\DoxyCodeLine{00101\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00102\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\ \ \ \ \ \ \ The\ number\ of\ alphabets\ in\ the\ word\ :\ \%d\(\backslash\)n"{}},\ n);}
+\DoxyCodeLine{00103\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ =\ 0;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ <\ n;\ ++\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}})}
+\DoxyCodeLine{00106\ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ temp[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}]\ =\ \textcolor{charliteral}{'-\/'};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\%c"{}},\ temp[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}]);}
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00112\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\(\backslash\)t\ \ \ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\(\backslash\)t\ \ \ |\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n"{}}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\(\backslash\)t\ \ \ |\(\backslash\)n"{}}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\(\backslash\)t\ \ \ |\(\backslash\)n"{}}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\(\backslash\)t\ \ \ |\(\backslash\)n"{}}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\(\backslash\)t\ \ \ |\(\backslash\)n"{}}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\(\backslash\)t\ \ \ |\(\backslash\)n"{}}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\(\backslash\)t\ \ \ |\(\backslash\)n"{}}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\(\backslash\)t\ -\/-\/-\/-\/\(\backslash\)n"{}});}
+\DoxyCodeLine{00121\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00122\ \ \ \ \ lives\ =\ 5;}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordflow}{while}\ (lives\ <=\ 5)}
+\DoxyCodeLine{00125\ \ \ \ \ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ correct\ =\ 0;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\ HINT\ :\ \%s\(\backslash\)n"{}},\ hint);}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\ Please\ enter\ your\ guess\ :\ \ "{}});}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ player\_guessed\ =\ getche();}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}\ =\ 0;\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}\ <\ n;\ \mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}++)}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (player\_guessed\ ==\ word[\mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}])}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp[\mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}]\ =\ word[\mbox{\hyperlink{_adv_world_8h_a37d972ae0b47b9099e30983131d31916}{j}}];}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ correct\ =\ 1;}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_adv_world_8h_a614441b95148070e68b155910d9ecc34}{guess}}++;}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (correct\ !=\ 1)}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\(\backslash\)n\(\backslash\)tYour\ letter\ \%c\ is\ not\ in\ the\ world,\ Guess\ another\ letter.\(\backslash\)n"{}},\ player\_guessed);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ lives-\/-\/;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_singleplayer_8h_a93d34352e419bf2a2e4b0d2582e9cb5a}{printBody}}(lives);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ =\ 0;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}\ <\ n;\ \mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)t\%c"{}},\ temp[\mbox{\hyperlink{_adv_world_8h_acb559820d9ca11295b4500f179ef6392}{i}}]);}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_adv_world_8h_a614441b95148070e68b155910d9ecc34}{guess}}\ ==\ n)}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\ \ CONGRATULATIONS!!!!!!,You\ Have\ Guessed\ The\ Word\ Correctly\(\backslash\)n"{}});}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lives\ ==\ 0)}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\ \ SORRY,\ YOU\ ARE\ HANGED:((\(\backslash\)n"{}});}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\ \ BETTER\ LUCK\ NEXT\ TIME!\(\backslash\)n"{}});}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ |\ \ The\ word\ you\ had\ to\ guess\ was\ :\ \ \ \%s"{}},\ word);}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00174\ \ \ \ \ \}}
+\DoxyCodeLine{00175\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)t\(\backslash\)tPress\ any\ key\ to\ continue......"{}});}
+\DoxyCodeLine{00176\ \ \ \ \ getch();}
+\DoxyCodeLine{00177\ \ \ \ \ \mbox{\hyperlink{_hangman_8h_a0c7b0c91e5075fd257589225668daf5e}{Hangman}}();}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00181\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,169 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Game Hub}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Data Structure Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Data Structures}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Data Structure Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}coordinate Struct Reference}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Field Documentation}{7}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}direction}{7}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}x}{7}{subsubsection.4.1.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.1.3}y}{7}{subsubsection.4.1.1.3}%
+\contentsline {chapter}{\numberline {5}File Documentation}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Adv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}World.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{9}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{11}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Macro Definition Documentation}{11}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}DOWN}{11}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}LEFT}{11}{subsubsection.5.1.2.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.3}NUM\_WORDS}{11}{subsubsection.5.1.2.3}%
+\contentsline {subsubsection}{\numberline {5.1.2.4}RIGHT}{11}{subsubsection.5.1.2.4}%
+\contentsline {subsubsection}{\numberline {5.1.2.5}TIME\_LIMIT}{11}{subsubsection.5.1.2.5}%
+\contentsline {subsubsection}{\numberline {5.1.2.6}UP}{12}{subsubsection.5.1.2.6}%
+\contentsline {subsubsection}{\numberline {5.1.2.7}WORD\_LENGTH}{12}{subsubsection.5.1.2.7}%
+\contentsline {subsection}{\numberline {5.1.3}Typedef Documentation}{12}{subsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.1}coordinate}{12}{subsubsection.5.1.3.1}%
+\contentsline {subsection}{\numberline {5.1.4}Function Documentation}{12}{subsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.4.1}About()}{12}{subsubsection.5.1.4.1}%
+\contentsline {subsubsection}{\numberline {5.1.4.2}aworld()}{12}{subsubsection.5.1.4.2}%
+\contentsline {subsubsection}{\numberline {5.1.4.3}awtitle()}{12}{subsubsection.5.1.4.3}%
+\contentsline {subsubsection}{\numberline {5.1.4.4}Bend()}{13}{subsubsection.5.1.4.4}%
+\contentsline {subsubsection}{\numberline {5.1.4.5}Boarder()}{13}{subsubsection.5.1.4.5}%
+\contentsline {subsubsection}{\numberline {5.1.4.6}Delay()}{13}{subsubsection.5.1.4.6}%
+\contentsline {subsubsection}{\numberline {5.1.4.7}Down()}{13}{subsubsection.5.1.4.7}%
+\contentsline {subsubsection}{\numberline {5.1.4.8}ExitGame()}{13}{subsubsection.5.1.4.8}%
+\contentsline {subsubsection}{\numberline {5.1.4.9}Food()}{13}{subsubsection.5.1.4.9}%
+\contentsline {subsubsection}{\numberline {5.1.4.10}gotoxy()}{13}{subsubsection.5.1.4.10}%
+\contentsline {subsubsection}{\numberline {5.1.4.11}GotoXY()}{14}{subsubsection.5.1.4.11}%
+\contentsline {subsubsection}{\numberline {5.1.4.12}Guess()}{14}{subsubsection.5.1.4.12}%
+\contentsline {subsubsection}{\numberline {5.1.4.13}Left()}{14}{subsubsection.5.1.4.13}%
+\contentsline {subsubsection}{\numberline {5.1.4.14}load()}{14}{subsubsection.5.1.4.14}%
+\contentsline {subsubsection}{\numberline {5.1.4.15}Move()}{14}{subsubsection.5.1.4.15}%
+\contentsline {subsubsection}{\numberline {5.1.4.16}r1()}{14}{subsubsection.5.1.4.16}%
+\contentsline {subsubsection}{\numberline {5.1.4.17}r1title()}{14}{subsubsection.5.1.4.17}%
+\contentsline {subsubsection}{\numberline {5.1.4.18}r2abt()}{15}{subsubsection.5.1.4.18}%
+\contentsline {subsubsection}{\numberline {5.1.4.19}r2title()}{15}{subsubsection.5.1.4.19}%
+\contentsline {subsubsection}{\numberline {5.1.4.20}r3()}{15}{subsubsection.5.1.4.20}%
+\contentsline {subsubsection}{\numberline {5.1.4.21}r3abt()}{15}{subsubsection.5.1.4.21}%
+\contentsline {subsubsection}{\numberline {5.1.4.22}record()}{15}{subsubsection.5.1.4.22}%
+\contentsline {subsubsection}{\numberline {5.1.4.23}Right()}{15}{subsubsection.5.1.4.23}%
+\contentsline {subsubsection}{\numberline {5.1.4.24}Score()}{15}{subsubsection.5.1.4.24}%
+\contentsline {subsubsection}{\numberline {5.1.4.25}Scoreonly()}{16}{subsubsection.5.1.4.25}%
+\contentsline {subsubsection}{\numberline {5.1.4.26}Start()}{16}{subsubsection.5.1.4.26}%
+\contentsline {subsubsection}{\numberline {5.1.4.27}Up()}{16}{subsubsection.5.1.4.27}%
+\contentsline {subsubsection}{\numberline {5.1.4.28}win()}{16}{subsubsection.5.1.4.28}%
+\contentsline {subsubsection}{\numberline {5.1.4.29}wordgame()}{16}{subsubsection.5.1.4.29}%
+\contentsline {subsection}{\numberline {5.1.5}Variable Documentation}{17}{subsection.5.1.5}%
+\contentsline {subsubsection}{\numberline {5.1.5.1}bend}{17}{subsubsection.5.1.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.5.2}bend\_no}{17}{subsubsection.5.1.5.2}%
+\contentsline {subsubsection}{\numberline {5.1.5.3}body}{17}{subsubsection.5.1.5.3}%
+\contentsline {subsubsection}{\numberline {5.1.5.4}endTime}{17}{subsubsection.5.1.5.4}%
+\contentsline {subsubsection}{\numberline {5.1.5.5}food}{17}{subsubsection.5.1.5.5}%
+\contentsline {subsubsection}{\numberline {5.1.5.6}guess}{17}{subsubsection.5.1.5.6}%
+\contentsline {subsubsection}{\numberline {5.1.5.7}head}{17}{subsubsection.5.1.5.7}%
+\contentsline {subsubsection}{\numberline {5.1.5.8}i}{18}{subsubsection.5.1.5.8}%
+\contentsline {subsubsection}{\numberline {5.1.5.9}j}{18}{subsubsection.5.1.5.9}%
+\contentsline {subsubsection}{\numberline {5.1.5.10}key}{18}{subsubsection.5.1.5.10}%
+\contentsline {subsubsection}{\numberline {5.1.5.11}len}{18}{subsubsection.5.1.5.11}%
+\contentsline {subsubsection}{\numberline {5.1.5.12}length}{18}{subsubsection.5.1.5.12}%
+\contentsline {subsubsection}{\numberline {5.1.5.13}life}{18}{subsubsection.5.1.5.13}%
+\contentsline {subsubsection}{\numberline {5.1.5.14}numCorrect}{18}{subsubsection.5.1.5.14}%
+\contentsline {subsubsection}{\numberline {5.1.5.15}p}{19}{subsubsection.5.1.5.15}%
+\contentsline {subsubsection}{\numberline {5.1.5.16}startTime}{19}{subsubsection.5.1.5.16}%
+\contentsline {subsubsection}{\numberline {5.1.5.17}used}{19}{subsubsection.5.1.5.17}%
+\contentsline {subsubsection}{\numberline {5.1.5.18}words}{19}{subsubsection.5.1.5.18}%
+\contentsline {section}{\numberline {5.2}Adv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}World.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{19}{section.5.2}%
+\contentsline {section}{\numberline {5.3}byby.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{34}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{34}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Function Documentation}{34}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}byby()}{35}{subsubsection.5.3.2.1}%
+\contentsline {section}{\numberline {5.4}byby.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{35}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Congrats.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{35}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{35}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Function Documentation}{36}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}congrats()}{36}{subsubsection.5.5.2.1}%
+\contentsline {section}{\numberline {5.6}Congrats.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{36}{section.5.6}%
+\contentsline {section}{\numberline {5.7}finalround.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{37}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{37}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Function Documentation}{37}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}final()}{37}{subsubsection.5.7.2.1}%
+\contentsline {subsubsection}{\numberline {5.7.2.2}options()}{37}{subsubsection.5.7.2.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.3}r4abt()}{38}{subsubsection.5.7.2.3}%
+\contentsline {subsubsection}{\numberline {5.7.2.4}winner()}{38}{subsubsection.5.7.2.4}%
+\contentsline {subsection}{\numberline {5.7.3}Variable Documentation}{38}{subsection.5.7.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.1}score}{38}{subsubsection.5.7.3.1}%
+\contentsline {section}{\numberline {5.8}finalround.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{38}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Hangman.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{44}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Detailed Description}{44}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}Function Documentation}{44}{subsection.5.9.2}%
+\contentsline {subsubsection}{\numberline {5.9.2.1}about()}{45}{subsubsection.5.9.2.1}%
+\contentsline {subsubsection}{\numberline {5.9.2.2}Hangman()}{45}{subsubsection.5.9.2.2}%
+\contentsline {subsubsection}{\numberline {5.9.2.3}title()}{45}{subsubsection.5.9.2.3}%
+\contentsline {section}{\numberline {5.10}Hangman.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{45}{section.5.10}%
+\contentsline {section}{\numberline {5.11}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{47}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}Detailed Description}{48}{subsection.5.11.1}%
+\contentsline {subsection}{\numberline {5.11.2}Function Documentation}{48}{subsection.5.11.2}%
+\contentsline {subsubsection}{\numberline {5.11.2.1}topspace()}{48}{subsubsection.5.11.2.1}%
+\contentsline {section}{\numberline {5.12}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{48}{section.5.12}%
+\contentsline {subsection}{\numberline {5.12.1}Detailed Description}{48}{subsection.5.12.1}%
+\contentsline {subsection}{\numberline {5.12.2}Function Documentation}{49}{subsection.5.12.2}%
+\contentsline {subsubsection}{\numberline {5.12.2.1}f\_header()}{49}{subsubsection.5.12.2.1}%
+\contentsline {subsubsection}{\numberline {5.12.2.2}menu()}{49}{subsubsection.5.12.2.2}%
+\contentsline {section}{\numberline {5.13}menu.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{49}{section.5.13}%
+\contentsline {section}{\numberline {5.14}Multiplayer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{50}{section.5.14}%
+\contentsline {subsection}{\numberline {5.14.1}Detailed Description}{50}{subsection.5.14.1}%
+\contentsline {subsection}{\numberline {5.14.2}Function Documentation}{50}{subsection.5.14.2}%
+\contentsline {subsubsection}{\numberline {5.14.2.1}load()}{51}{subsubsection.5.14.2.1}%
+\contentsline {subsubsection}{\numberline {5.14.2.2}multi()}{51}{subsubsection.5.14.2.2}%
+\contentsline {subsubsection}{\numberline {5.14.2.3}takeword()}{51}{subsubsection.5.14.2.3}%
+\contentsline {section}{\numberline {5.15}Multiplayer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{52}{section.5.15}%
+\contentsline {section}{\numberline {5.16}quiz.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{54}{section.5.16}%
+\contentsline {subsection}{\numberline {5.16.1}Detailed Description}{54}{subsection.5.16.1}%
+\contentsline {subsection}{\numberline {5.16.2}Function Documentation}{54}{subsection.5.16.2}%
+\contentsline {subsubsection}{\numberline {5.16.2.1}quiz()}{54}{subsubsection.5.16.2.1}%
+\contentsline {subsubsection}{\numberline {5.16.2.2}quiztitle()}{54}{subsubsection.5.16.2.2}%
+\contentsline {section}{\numberline {5.17}quiz.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{55}{section.5.17}%
+\contentsline {section}{\numberline {5.18}Singleplayer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{78}{section.5.18}%
+\contentsline {subsection}{\numberline {5.18.1}Detailed Description}{78}{subsection.5.18.1}%
+\contentsline {subsection}{\numberline {5.18.2}Function Documentation}{78}{subsection.5.18.2}%
+\contentsline {subsubsection}{\numberline {5.18.2.1}loading()}{78}{subsubsection.5.18.2.1}%
+\contentsline {subsubsection}{\numberline {5.18.2.2}MedicalName()}{78}{subsubsection.5.18.2.2}%
+\contentsline {subsubsection}{\numberline {5.18.2.3}MedicalNameHint()}{79}{subsubsection.5.18.2.3}%
+\contentsline {subsubsection}{\numberline {5.18.2.4}personality()}{79}{subsubsection.5.18.2.4}%
+\contentsline {subsubsection}{\numberline {5.18.2.5}personalityHint()}{79}{subsubsection.5.18.2.5}%
+\contentsline {subsubsection}{\numberline {5.18.2.6}printBody()}{79}{subsubsection.5.18.2.6}%
+\contentsline {subsubsection}{\numberline {5.18.2.7}single()}{79}{subsubsection.5.18.2.7}%
+\contentsline {section}{\numberline {5.19}Singleplayer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{80}{section.5.19}%
+\contentsline {section}{\numberline {5.20}tictactoe.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{85}{section.5.20}%
+\contentsline {subsection}{\numberline {5.20.1}Detailed Description}{86}{subsection.5.20.1}%
+\contentsline {subsection}{\numberline {5.20.2}Function Documentation}{86}{subsection.5.20.2}%
+\contentsline {subsubsection}{\numberline {5.20.2.1}category()}{86}{subsubsection.5.20.2.1}%
+\contentsline {subsubsection}{\numberline {5.20.2.2}checkFreeSpaces()}{86}{subsubsection.5.20.2.2}%
+\contentsline {subsubsection}{\numberline {5.20.2.3}checkWinner()}{86}{subsubsection.5.20.2.3}%
+\contentsline {subsubsection}{\numberline {5.20.2.4}computerMove()}{87}{subsubsection.5.20.2.4}%
+\contentsline {subsubsection}{\numberline {5.20.2.5}level()}{87}{subsubsection.5.20.2.5}%
+\contentsline {subsubsection}{\numberline {5.20.2.6}multiPlayer()}{87}{subsubsection.5.20.2.6}%
+\contentsline {subsubsection}{\numberline {5.20.2.7}play()}{87}{subsubsection.5.20.2.7}%
+\contentsline {subsubsection}{\numberline {5.20.2.8}player1Move()}{87}{subsubsection.5.20.2.8}%
+\contentsline {subsubsection}{\numberline {5.20.2.9}player2Move()}{88}{subsubsection.5.20.2.9}%
+\contentsline {subsubsection}{\numberline {5.20.2.10}playerMove()}{88}{subsubsection.5.20.2.10}%
+\contentsline {subsubsection}{\numberline {5.20.2.11}printBoard()}{88}{subsubsection.5.20.2.11}%
+\contentsline {subsubsection}{\numberline {5.20.2.12}printWinner()}{88}{subsubsection.5.20.2.12}%
+\contentsline {subsubsection}{\numberline {5.20.2.13}problem()}{88}{subsubsection.5.20.2.13}%
+\contentsline {subsubsection}{\numberline {5.20.2.14}resetBoard()}{89}{subsubsection.5.20.2.14}%
+\contentsline {subsubsection}{\numberline {5.20.2.15}singlePlayer()}{89}{subsubsection.5.20.2.15}%
+\contentsline {subsubsection}{\numberline {5.20.2.16}ticabout()}{89}{subsubsection.5.20.2.16}%
+\contentsline {subsubsection}{\numberline {5.20.2.17}Tictactoe()}{89}{subsubsection.5.20.2.17}%
+\contentsline {subsubsection}{\numberline {5.20.2.18}ticTitle()}{89}{subsubsection.5.20.2.18}%
+\contentsline {subsubsection}{\numberline {5.20.2.19}winnerFrom2()}{89}{subsubsection.5.20.2.19}%
+\contentsline {subsection}{\numberline {5.20.3}Variable Documentation}{89}{subsection.5.20.3}%
+\contentsline {subsubsection}{\numberline {5.20.3.1}board}{90}{subsubsection.5.20.3.1}%
+\contentsline {subsubsection}{\numberline {5.20.3.2}chooseCategory}{90}{subsubsection.5.20.3.2}%
+\contentsline {subsubsection}{\numberline {5.20.3.3}chooseLevel}{90}{subsubsection.5.20.3.3}%
+\contentsline {subsubsection}{\numberline {5.20.3.4}COMPUTER}{90}{subsubsection.5.20.3.4}%
+\contentsline {subsubsection}{\numberline {5.20.3.5}PLAYER}{90}{subsubsection.5.20.3.5}%
+\contentsline {subsubsection}{\numberline {5.20.3.6}PLAYER1}{90}{subsubsection.5.20.3.6}%
+\contentsline {subsubsection}{\numberline {5.20.3.7}player1Name}{90}{subsubsection.5.20.3.7}%
+\contentsline {subsubsection}{\numberline {5.20.3.8}PLAYER2}{90}{subsubsection.5.20.3.8}%
+\contentsline {subsubsection}{\numberline {5.20.3.9}player2Name}{91}{subsubsection.5.20.3.9}%
+\contentsline {section}{\numberline {5.21}tictactoe.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{91}{section.5.21}%
